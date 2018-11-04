@@ -1,0 +1,67 @@
+{
+    "manifestVersion": 1,
+    "id": "pekspro-efcore-migration-script-generator",
+    "version": "0.0.12",
+    "name": "EF Core Migrations Script Generator",
+    "publisher": "pekspro",
+    "categories": [
+        "Build and release"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tool for projects that is using Code-First with EF Core. Generate migrations scripts that could be used to update an database (for instance with the task 'Azure SQL Database Deployment').",
+    "icons": {
+        "default": "images/ef-core-migration-script-generator.png"
+    },
+    "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/pekspro/EF-Migrations-Script-Generator-Task"
+    },
+    "screenshots": [
+        {
+            "path": "images/screenshot.png"
+        }
+    ],
+    "tags": [
+        "Entity Framework",
+        "EF Core",
+        "SQL",
+        "Migration",
+        "Database"
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "license.md"
+        }
+    },
+    "files": [
+        {
+            "//Relative path of the task directory": "",
+            "path": "efcore-migration-script-generator"
+        }
+    ],
+    "contributions": [
+        {
+            "//Identifier of the contribution. Must be unique within the extension. Does not need to match the name of the build task, but typically the build task name is included in the ID of the contribution.": "",
+            "id": "efcore-migration-script-generator",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "//Name of the task. This must match the folder name of the corresponding self-contained build task definition.": "",
+                "name": "efcore-migration-script-generator"
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "tasktest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.2",
+    "@types/q": "^1.5.1"
+  }
+}
