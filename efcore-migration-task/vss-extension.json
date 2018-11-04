@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "pekspro-efcore-migration-script-generator",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "name": "EF Core Migrations Script Generator",
     "publisher": "pekspro",
     "categories": [
