@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
     "id": "pekspro-efcore-migration-script-generator",
-    "version": "0.0.13",
-    "name": "EF Core Migrations Script Generator",
+    "version": "0.0.14",
+    "name": "Entity Framework Core Migrations Script Generator",
     "publisher": "pekspro",
     "categories": [
         "Build and release"
@@ -12,7 +12,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Tool for projects that is using Code-First with EF Core. Generate migrations scripts that could be used to update an database (for instance with the task 'Azure SQL Database Deployment').",
+    "description": "Tool for projects that is using Code-First with Entity Framework Core. Generate migrations scripts that to be used to update an database (for instance with the task 'Azure SQL Database Deployment').",
     "icons": {
         "default": "images/ef-core-migration-script-generator.png"
     },
