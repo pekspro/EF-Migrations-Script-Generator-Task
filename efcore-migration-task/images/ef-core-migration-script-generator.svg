@@ -37,14 +37,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
      id="namedview35"
      showgrid="false"
      inkscape:zoom="4.9567398"
-     inkscape:cx="38.659224"
+     inkscape:cx="-3.0012239"
      inkscape:cy="22.317823"
-     inkscape:window-x="-8"
+     inkscape:window-x="1672"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="Ibiza_Symbols" /><g
@@ -220,150 +220,154 @@
        id="Layer_57">
 </g><g
        id="Ibiza_Symbols">
-	<rect
-   style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-   id="rect914"
-   width="15.549463"
-   height="5.4800034"
-   x="139.9548"
-   y="-6.2233028" /><rect
-   style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-   id="rect914-4"
-   width="26.847212"
-   height="27.974628"
-   x="158.05418"
-   y="11.292264"
-   ry="3.7322919"
-   rx="3.7322919" /><path
-   id="path894"
-   d="m 147.76837,-6.2124398 c 4.25621,0 7.66119,1.0827147 7.66119,2.3974396 0,1.3147249 -3.48236,2.3974395 -7.66119,2.3974395 -4.17881,0 -7.66116,-1.0827146 -7.66116,-2.3974395 0,-1.3920616 3.48235,-2.3974396 7.66116,-2.3974396 z m -0.23216,-1.6240718 c -5.95868,0 -10.52443,2.0880924 -10.52443,4.3308585 V 17.065923 c 0,2.320104 4.56575,4.408198 10.52443,4.408198 5.95869,0 10.83398,-2.088094 10.83398,-4.330859 V -3.3509798 c 0,-2.3201027 -4.7979,-4.4855318 -10.83398,-4.4855318 z"
-   inkscape:connector-curvature="0"
-   style="clip-rule:evenodd;fill:#800080;fill-rule:evenodd;stroke-width:0.99999994"
-   sodipodi:nodetypes="ssssssssssss" />
-<g
-   id="g1085"
-   transform="translate(130.23024,-16.698127)"
-   style="fill:#808080"><g
-     id="Layer_1-7"
-     style="fill:#808080">
 	<g
-   id="File_x2C__general"
-   style="fill:#808080">
+   id="g3817"
+   transform="matrix(1.2890866,0,0,1.2890866,-38.660576,2.4671761)"><rect
+     y="-6.2233028"
+     x="139.9548"
+     height="5.4800034"
+     width="15.549463"
+     id="rect914"
+     style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><path
+     sodipodi:nodetypes="ssssssssssss"
+     style="clip-rule:evenodd;fill:#800080;fill-rule:evenodd;stroke-width:0.99999994"
+     inkscape:connector-curvature="0"
+     d="m 147.76837,-6.2124398 c 4.25621,0 7.66119,1.0827147 7.66119,2.3974396 0,1.3147249 -3.48236,2.3974395 -7.66119,2.3974395 -4.17881,0 -7.66116,-1.0827146 -7.66116,-2.3974395 0,-1.3920616 3.48235,-2.3974396 7.66116,-2.3974396 z m -0.23216,-1.6240718 c -5.95868,0 -10.52443,2.0880924 -10.52443,4.3308585 V 17.065923 c 0,2.320104 4.56575,4.408198 10.52443,4.408198 5.95869,0 10.83398,-2.088094 10.83398,-4.330859 V -3.3509798 c 0,-2.3201027 -4.7979,-4.4855318 -10.83398,-4.4855318 z"
+     id="path894" /></g>
+<g
+   id="g3853"
+   transform="matrix(1.0257822,0,0,1.0257822,-4.8362263,-0.64589174)"><rect
+     rx="3.7322919"
+     ry="3.7322919"
+     y="11.292264"
+     x="158.05418"
+     height="27.974628"
+     width="26.847212"
+     id="rect914-4"
+     style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><g
+     style="fill:#808080"
+     transform="translate(130.23024,-16.698127)"
+     id="g1085"><g
+       style="fill:#808080"
+       id="Layer_1-7">
+	<g
+   style="fill:#808080"
+   id="File_x2C__general">
 		<title
    id="title1007">Sheet.1071</title>
 	</g>
 	<g
-   id="Message"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Message">
 	</g>
 	<g
-   id="Monitor"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Monitor">
 	</g>
 	<g
-   id="Monitor_running_apps"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Monitor_running_apps">
 	</g>
 	<g
-   id="Mouse"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Mouse">
 	</g>
 	<g
-   id="Network_card"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Network_card">
 	</g>
 	<g
-   id="Not_allowed"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Not_allowed">
 	</g>
 	<g
-   id="Performance"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Performance">
 	</g>
 	<g
-   id="Phone"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Phone">
 	</g>
 	<g
-   id="Plug_and_play"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Plug_and_play">
 	</g>
 	<g
-   id="Powershell_script_file"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Powershell_script_file">
 	</g>
 	<g
-   id="Protocol_stack"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Protocol_stack">
 	</g>
 	<g
-   id="Queue_x2C__general"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Queue_x2C__general">
 	</g>
 	<g
-   id="RMS_connector"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="RMS_connector">
 	</g>
 	<g
-   id="Router"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Router">
 	</g>
 	<g
-   id="Script_file"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Script_file">
 		<g
-   id="g1032"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="g1032">
 			<path
-   id="path1024"
-   d="M 50.5,26.1 H 30.8 c -2.3,0 -4.2,1.9 -4.2,4.2 v 22.9 c 0,2.3 1.9,4.2 4.2,4.2 h 21.8 c 2.3,0 4.2,-1.9 4.2,-4.2 V 32.3 Z m 3.7,27.1 c 0,0.9 -0.7,1.6 -1.6,1.6 H 30.8 c -0.9,0 -1.6,-0.7 -1.6,-1.6 v -23 c 0,-0.9 0.7,-1.6 1.6,-1.6 h 18.4 v 5.1 h 5 z"
+   style="fill:#808080"
    inkscape:connector-curvature="0"
-   style="fill:#808080" />
+   d="M 50.5,26.1 H 30.8 c -2.3,0 -4.2,1.9 -4.2,4.2 v 22.9 c 0,2.3 1.9,4.2 4.2,4.2 h 21.8 c 2.3,0 4.2,-1.9 4.2,-4.2 V 32.3 Z m 3.7,27.1 c 0,0.9 -0.7,1.6 -1.6,1.6 H 30.8 c -0.9,0 -1.6,-0.7 -1.6,-1.6 v -23 c 0,-0.9 0.7,-1.6 1.6,-1.6 h 18.4 v 5.1 h 5 z"
+   id="path1024" />
 			<polygon
-   id="polygon1026"
-   points="31.2,43.3 36.9,47 36.9,44.9 32.9,42.6 36.9,40.1 36.9,38 31.2,41.9 "
-   style="fill:#808080" />
+   style="fill:#808080"
+   points="36.9,44.9 32.9,42.6 36.9,40.1 36.9,38 31.2,41.9 31.2,43.3 36.9,47 "
+   id="polygon1026" />
 			<polygon
-   id="polygon1028"
-   points="38.2,49.6 39.9,49.6 44.2,35.1 42.4,35.1 "
-   style="fill:#808080" />
+   style="fill:#808080"
+   points="44.2,35.1 42.4,35.1 38.2,49.6 39.9,49.6 "
+   id="polygon1028" />
 			<polygon
-   id="polygon1030"
-   points="45.6,40 49.7,42.5 45.6,44.8 45.6,46.9 51.3,43.2 51.3,41.8 45.6,37.9 "
-   style="fill:#808080" />
+   style="fill:#808080"
+   points="45.6,44.8 45.6,46.9 51.3,43.2 51.3,41.8 45.6,37.9 45.6,40 49.7,42.5 "
+   id="polygon1030" />
 		</g>
 	</g>
 </g><g
-     id="paths-7"
-     style="fill:#808080">
+       style="fill:#808080"
+       id="paths-7">
 	<g
-   id="Access_control-4"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Access_control-4">
 	</g>
 	<g
-   id="Azure_active_directory-5"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Azure_active_directory-5">
 	</g>
 	<g
-   id="Generic_code"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Generic_code">
 	</g>
 	<g
-   id="Laptop"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Laptop">
 	</g>
 	<g
-   id="Load_balancer"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Load_balancer">
 	</g>
 	<g
-   id="Lock_x2C__protected"
-   style="fill:#808080">
+   style="fill:#808080"
+   id="Lock_x2C__protected">
 	</g>
 </g><g
-     id="symbols"
-     style="fill:#808080">
+       style="fill:#808080"
+       id="symbols">
 </g><g
-     id="slices"
-     style="fill:#808080">
-</g></g></g></g></svg>
+       style="fill:#808080"
+       id="slices">
+</g></g></g></g></g></svg>
