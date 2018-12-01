@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "pekspro-efcore-migration-script-generator",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "name": "Entity Framework Core Migrations Script Generator",
     "publisher": "pekspro",
     "categories": [
@@ -63,5 +63,8 @@
                 "name": "efcore-migration-script-generator"
             }
         }
+    ],
+    "galleryFlags": [
+        "Public"
     ]
 }
