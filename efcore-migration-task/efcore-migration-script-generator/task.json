@@ -17,7 +17,7 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 15
+        "Patch": 16
     },
     "instanceNameFormat": "Generate migrations scripts",
     "inputs": [
@@ -27,7 +27,7 @@
             "label": "Project Path",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Path to project (for instance a csproj-file) containing databases contexts. This must be an executable project. If the database context is defined in a library, select a project that is using this library."
+            "helpMarkDown": "Path to project (for instance a csproj-file) containing databases contexts."
         },
         {
             "name": "databasecontexts",
@@ -36,6 +36,14 @@
             "defaultValue": "",
             "required": true,
             "helpMarkDown": "Name(s) of database contexts."
+        },
+        {
+            "name": "startupprojectpath",
+            "type": "filePath",
+            "label": "Executable Project Path",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Path to an executable project (for instance a csproj-file) that is using the databases contexts. If the database context is defined the same project this isn't necessary."
         },
         {
             "name": "targetfolder",

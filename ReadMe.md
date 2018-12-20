@@ -6,8 +6,9 @@ to generate migration script for projects using Entity Framework Core with Code-
 With this task it's very easy to generate migration scripts:
 
 * Add Entity Framework Core Migrations Script Generator task to your build pipeline.
-* Select a project that is using the database contexts. **Note:** If you have your database contexts in a library, select a project that is using that library.
+* Select the project where the database project.
 * Enter the names of the database contexts.
+* If your database context is defined in a library, you also need to select an executable project that is using this library as start-up project.
 * You could also change the directory where the migrations scripts should be stored. By default they are stored in a folder named **migrations**.
 
 When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. The migrations scripts are idempotent, meaning that you could run the several times and the end result should be the same even if you have run the script before. So it's safe to run the migration on every release even if you haven't done any changes.

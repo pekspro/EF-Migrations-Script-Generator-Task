@@ -14,9 +14,17 @@ function run() {
         try {
             let tool;
             var projectpath = tl.getInput('projectpath', true);
+            var startupprojectpath = tl.getInput('startupprojectpath', false);
             var targetfolder = tl.getInput('targetfolder', true);
             var databasecontexts = tl.getDelimitedInput("databasecontexts", "\n", true);
             console.log("Project path: " + projectpath);
+            if (startupprojectpath) {
+                console.log("Start-up project path: " + startupprojectpath);
+            }
+            else {
+                console.log("Start-up project path not provided. Will use project path instead: " + projectpath);
+                startupprojectpath = projectpath;
+            }
             console.log("Target folder: " + targetfolder);
             console.log("Number of database contexts: " + databasecontexts.length);
             for (var databasecontext of databasecontexts) {
@@ -30,7 +38,7 @@ function run() {
                     .arg('--project')
                     .arg(projectpath)
                     .arg('--startup-project')
-                    .arg(projectpath)
+                    .arg(startupprojectpath)
                     .arg('--output')
                     .arg(targetfolder + '/' + databasecontext + '.sql')
                     .arg('--context')
