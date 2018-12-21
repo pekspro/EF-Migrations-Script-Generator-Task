@@ -14,11 +14,14 @@ function run() {
         try {
             let tool;
             var projectpath = tl.getPathInput('projectpath', true);
-            var startupprojectpath = tl.getPathInput('startupprojectpath', false);
+            var startupprojectpath = undefined;
+            if (tl.filePathSupplied('startupprojectpath')) {
+                startupprojectpath = tl.getPathInput('startupprojectpath', false);
+            }
             var targetfolder = tl.getInput('targetfolder', true);
             var databasecontexts = tl.getDelimitedInput("databasecontexts", "\n", true);
             console.log("Project path: " + projectpath);
-            if (startupprojectpath && tl.filePathSupplied(startupprojectpath)) {
+            if (startupprojectpath) {
                 console.log("Start-up project path: " + startupprojectpath);
             }
             else {

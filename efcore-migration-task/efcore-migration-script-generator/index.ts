@@ -1,18 +1,22 @@
 import tl = require('azure-pipelines-task-lib/task');
 import trm = require('azure-pipelines-task-lib/toolrunner');
+import { start } from 'repl';
 
 async function run() {
     try {
         let tool: trm.ToolRunner;
 
         var projectpath = tl.getPathInput('projectpath', true);
-        var startupprojectpath = tl.getPathInput('startupprojectpath', false);
+        var startupprojectpath : undefined|string = undefined;
+        if(tl.filePathSupplied('startupprojectpath')) {
+            startupprojectpath = tl.getPathInput('startupprojectpath', false);
+        }
         var targetfolder = tl.getInput('targetfolder', true);
         var databasecontexts = tl.getDelimitedInput("databasecontexts", "\n", true);
         
         console.log("Project path: " + projectpath);
         
-        if(startupprojectpath && tl.filePathSupplied(startupprojectpath)) {
+        if(startupprojectpath) {
             console.log("Start-up project path: " + startupprojectpath);
         } else {
             console.log("Start-up project path not provided. Will use project path instead: " + projectpath);
