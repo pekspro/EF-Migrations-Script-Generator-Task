@@ -1,6 +1,8 @@
 # Entity Framework Core Migrations Script Generator
-**Entity Framework Core Migrations Script Generator** is a very simple extensions to make it easy
+**Entity Framework Core Migrations Script Generator** is a very simple extension to make it easy
 to generate migration script for projects using Entity Framework Core with Code-First. This tool internally calls **dotnet ef migrations script**.
+
+This tool can be installed from https://marketplace.visualstudio.com/items?itemName=pekspro.pekspro-efcore-migration-script-generator.
 
 ## How to generate migration scripts
 With this task it's very easy to generate migration scripts:
