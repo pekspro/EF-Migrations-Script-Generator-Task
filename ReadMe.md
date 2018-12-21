@@ -70,6 +70,17 @@ in the **efcore-migration-task** directory:
     tfx extension create
 
 
+## Test status
+
+Test in Windows:
+
+[![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Windows)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=10)
+
+Test in Linux:
+
+[![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Linux)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=7)
+
+
 # References
 Mainfest description:
 https://docs.microsoft.com/sv-se/azure/devops/extend/develop/manifest
