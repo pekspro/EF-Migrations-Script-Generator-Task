@@ -5,14 +5,14 @@ async function run() {
     try {
         let tool: trm.ToolRunner;
 
-        var projectpath = tl.getInput('projectpath', true);
+        var projectpath = tl.getPathInput('projectpath', true);
         var startupprojectpath = tl.getPathInput('startupprojectpath', false);
         var targetfolder = tl.getInput('targetfolder', true);
         var databasecontexts = tl.getDelimitedInput("databasecontexts", "\n", true);
         
         console.log("Project path: " + projectpath);
-        //TODO: How to check if a proper project path?
-        if(startupprojectpath && startupprojectpath.indexOf(".") > 0) {
+        
+        if(startupprojectpath && tl.filePathSupplied(startupprojectpath)) {
             console.log("Start-up project path: " + startupprojectpath);
         } else {
             console.log("Start-up project path not provided. Will use project path instead: " + projectpath);
