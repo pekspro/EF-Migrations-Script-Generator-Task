@@ -77,3 +77,5 @@ https://docs.microsoft.com/sv-se/azure/devops/extend/develop/manifest
 Task.json reference:
 https://raw.githubusercontent.com/Microsoft/vsts-task-lib/master/tasks.schema.json
 
+Azure Pipeline Tasks:
+https://github.com/Microsoft/azure-pipelines-tasks
