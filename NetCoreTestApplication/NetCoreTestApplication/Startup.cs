@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NetCoreTestApplication.Data;
+using NetCoreTestLibrary.Data;
 
 namespace NetCoreTestApplication
 {
@@ -30,7 +31,11 @@ namespace NetCoreTestApplication
                options.UseSqlServer(Configuration.GetConnectionString("FirstDatabaseContext")));
             services.AddDbContext<SecondDatabaseContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("SecondDatabaseContext")));
-
+            services.AddDbContext<LibraryDatabaseContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("LibraryDatabaseContext")));
+            services.AddDbContext<InternalLibraryDatabaseContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("InternalLibraryDatabaseContext")));
+            
 
             services.Configure<CookiePolicyOptions>(options =>
             {
