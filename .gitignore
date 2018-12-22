@@ -262,3 +262,6 @@ __pycache__/
 
 *.vsix
 *.zip
+
+# Javascript files generated from typescript.
+/efcore-migration-task/**/*.js
