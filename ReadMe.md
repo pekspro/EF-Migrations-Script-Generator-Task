@@ -70,7 +70,11 @@ in the **efcore-migration-task** directory:
     tfx extension create
 
 
-## Test status
+## Build and test status
+
+Build:
+
+[![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Build%20extension)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=11)
 
 Test in Windows:
 

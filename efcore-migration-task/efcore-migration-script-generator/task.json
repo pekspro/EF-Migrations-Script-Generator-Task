@@ -2,7 +2,7 @@
     "id": "acdefe1b-3f7e-474e-b545-5816baa90334",
     "name": "efcore-migration-script-generator-task",
     "friendlyName": "Entity Framework Core Migrations Script Generator",
-    "description": "Tool for projects that is using Code-First with Entity Framework Core. Generate migrations scripts that to be used to update an database (for instance with the task 'Azure SQL Database Deployment').",
+    "description": "Tool for projects that use Entity Framework Core Code-First. Generates migration scripts which can be used to update a database (for instance with the task 'Azure SQL Database Deployment').",
     "helpMarkDown": "[More Information](https://github.com/pekspro/EF-Migrations-Script-Generator-Task)",
     "category": "Utility",
     "visibility": [
@@ -17,33 +17,32 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 19
+        "Patch": 20
     },
-    "instanceNameFormat": "Generate migrations scripts",
-    "inputs": [
-        {
+    "instanceNameFormat": "Generate Migration Scripts",
+    "inputs": [{
             "name": "projectpath",
             "type": "filePath",
-            "label": "Project Path",
+            "label": "Main Project Path",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Path to project (for instance a csproj-file) containing databases contexts."
+            "helpMarkDown": "Path to project (for instance a .csproj file) containing DbContexts."
         },
         {
             "name": "databasecontexts",
             "type": "multiLine",
-            "label": "Database Contexts",
+            "label": "DbContexts",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Name(s) of database contexts."
+            "helpMarkDown": "Name(s) of DbContexts, one per line."
         },
         {
             "name": "startupprojectpath",
             "type": "filePath",
-            "label": "Executable Project Path",
+            "label": "Startup Project Path",
             "defaultValue": "",
             "required": false,
-            "helpMarkDown": "Path to an executable project (for instance a csproj-file) that is using the databases contexts. If the database context is defined the same project this setting isn't necessary."
+            "helpMarkDown": "Path to an executable project that references the Main Project containing your DbContext(s) (for instance a .csproj file). If the DbContext(s) are defined in the Main Project, then this setting is not necessary."
         },
         {
             "name": "targetfolder",
@@ -51,7 +50,7 @@
             "label": "Target Folder",
             "defaultValue": "$(build.artifactstagingdirectory)/migrations",
             "required": true,
-            "helpMarkDown": "Where migration scripts should be saved."
+            "helpMarkDown": "Where migration scripts should be saved. One .sql file will be generated for each DbContext you specify, named the same as your DbContext class. For example, if your DbContext is named MyTestDbContext, then the output file will be named MyTestDbContext.sql."
         }
     ],
     "execution": {
