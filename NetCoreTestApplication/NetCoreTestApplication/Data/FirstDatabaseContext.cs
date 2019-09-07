@@ -12,6 +12,8 @@ namespace NetCoreTestApplication.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<FirstDataModel>().HasData(
+                new FirstDataModel() { FirstDataModelID = 1, Name = "First name", LastName = "Last name" });
         }
 
         public DbSet<FirstDataModel> FirstDataModels { get; set; }
