@@ -42,7 +42,8 @@ async function run() {
                         .arg('--output')
                         .arg(targetfolder + '/' + databasecontext + '.sql')
                         .arg('--context')
-                        .arg(databasecontext);
+                        .arg(databasecontext)
+                        .arg('--verbose');
     
             await tool.exec();
         }
