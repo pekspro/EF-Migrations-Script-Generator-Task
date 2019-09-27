@@ -24,6 +24,12 @@ When you have your migration scripts ready you just need to apply them in a rele
 
 If you have several databases, add a new task for each database.
 
+## Supported versions
+Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 is supported. That said, if you are using .NET Core 3 you need to install the **dotnet-ef** global tool before you run this task. You could to this with this command:
+
+    $ dotnet tool install --global dotnet-ef
+
+You could also use [.NET Core Global Tool Installer](https://marketplace.visualstudio.com/items?itemName=petersendev.dotnet-global-tool-installer) to install this in your build pipeline.
 
 
 # Notes about the source
@@ -76,14 +82,21 @@ Build:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Build%20extension)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=11)
 
-Test in Windows:
+Test migration Windows .NET Core 2:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Windows)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=10)
 
-Test in Linux:
+Test migration Windows .NET Core 3:
+
+[![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%203)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=20)
+
+Test migration Linux .NET Core 2:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Linux)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=7)
 
+Test migration Linux .NET Core 3:
+
+[![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=21)
 
 # References
 Mainfest description:
