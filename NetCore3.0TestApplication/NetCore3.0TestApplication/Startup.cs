@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetCore3_0TestApplication.Data;
+using NetCore3TestLibrary;
 
 namespace NetCore3_0TestApplication
 {
@@ -29,6 +25,10 @@ namespace NetCore3_0TestApplication
                 options.UseSqlServer(Configuration.GetConnectionString("FirstDatabaseContext")));
             services.AddDbContext<SecondDatabaseContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("SecondDatabaseContext")));
+            services.AddDbContext<LibraryDatabaseContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("LibraryDatabaseContext")));
+            services.AddDbContext<InternalLibraryDatabaseContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("InternalLibraryDatabaseContext")));
 
             services.AddRazorPages();
         }
