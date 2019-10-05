@@ -65,6 +65,8 @@ async function run() {
             else {
                 console.log("dotnet-ef is already installed.");
             }
+        } else {
+            console.log("Will not try to install dotnet-ef. If you are using .NET Core 3 you could enable 'Install dependencies for .NET Core 3' to do this automatically.");
         }
 
         for(var databasecontext of databasecontexts)

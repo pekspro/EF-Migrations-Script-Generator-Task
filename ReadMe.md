@@ -12,6 +12,7 @@ With this task it's very easy to generate migration scripts:
 * Enter the names of the database contexts.
 * If your database context is defined in a library, you also need to select an executable project that is using this library as start-up project.
 * You could also change the directory where the migrations scripts should be stored. By default they are stored in a folder named **migrations**.
+* If you are using **.NET Core 3**, you could enable **Install dependencies for .NET Core 3** to auto install the global tool **dotnet-ef**.
 
 When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. The migrations scripts are idempotent, meaning that you could run the several times and the end result should be the same even if you have run the script before. So it's safe to run the migration on every release even if you haven't done any changes.
 
@@ -25,12 +26,7 @@ When you have your migration scripts ready you just need to apply them in a rele
 If you have several databases, add a new task for each database.
 
 ## Supported versions
-Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 is supported. That said, if you are using .NET Core 3 you need to install the **dotnet-ef** global tool before you run this task. You could to this with this command:
-
-    $ dotnet tool install --global dotnet-ef
-
-You could also use [.NET Core Global Tool Installer](https://marketplace.visualstudio.com/items?itemName=petersendev.dotnet-global-tool-installer) to install this in your build pipeline.
-
+Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 is supported. That said, if you are using .NET Core 3 this tool requires that the global tool **dotnet-ef** is installed. You could do this easily be enable **Install dependencies for .NET Core 3**.
 
 # Notes about the source
 In the folder **efcore-migration-task** the complete source is for this project.

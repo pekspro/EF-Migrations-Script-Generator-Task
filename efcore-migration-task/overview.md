@@ -10,6 +10,7 @@ With this task it's very easy to generate migration scripts:
 * Enter the names of the database contexts.
 * If your database context is defined in a library, you also need to select an executable project that is using this library as start-up project.
 * You could also change the directory where the migrations scripts should be stored. By default they are stored in a folder named **migrations**.
+* If you are using .NET Core 3, you could enable **Install dependencies for .NET Core 3** to auto install the global tool **dotnet-ef**.
 
 When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. The migrations scripts are idempotent, meaning that you could run the several times and the end result should be the same even if you have run the script before. So it's safe to run the migration on every release even if you haven't done any changes.
 
