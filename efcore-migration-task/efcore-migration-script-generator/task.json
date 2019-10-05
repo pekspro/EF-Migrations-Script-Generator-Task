@@ -51,6 +51,13 @@
             "defaultValue": "$(build.artifactstagingdirectory)/migrations",
             "required": true,
             "helpMarkDown": "Where migration scripts should be saved. One .sql file will be generated for each DbContext you specify, named the same as your DbContext class. For example, if your DbContext is named MyTestDbContext, then the output file will be named MyTestDbContext.sql."
+        },
+        {
+            "name": "installdependencies",
+            "type": "boolean",
+            "label": "Install dependencies for .NET Core 3",
+            "required": false,
+            "helpMarkDown": "If you are using **.NET Core 3**, the global tool **dotnet-ef** needs be installed before migrations script could be generated. Check this setting to do this automatically."
         }
     ],
     "execution": {

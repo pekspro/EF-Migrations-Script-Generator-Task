@@ -14,8 +14,15 @@ async function run() {
         var targetfolder = tl.getInput('targetfolder', true);
         var databasecontexts = tl.getDelimitedInput("databasecontexts", "\n", true);
         
+        var installdependencies : boolean = false;
+        if(tl.filePathSupplied('installdependencies')) {
+            installdependencies = tl.getBoolInput('installdependencies', false);
+        }
+
         console.log("Project path: " + projectpath);
         
+        
+
         if(startupprojectpath) {
             console.log("Start-up project path: " + startupprojectpath);
         } else {
@@ -24,6 +31,42 @@ async function run() {
         }
         console.log("Target folder: " + targetfolder);
         console.log("Number of database contexts: " + databasecontexts.length);
+
+        
+        if(installdependencies) {
+
+            console.log("Checking of dotnet-ef is installed.");
+
+            var output = '';
+
+            let cmdPathCheck = tl.which('dotnet');
+            tool = tl.tool(cmdPathCheck)
+                        .arg('tool')
+                        .arg('list')
+                        .arg('--global');
+
+            tool.on('stdout', (data) => {
+                output = data.toString();
+            });
+
+            await tool.exec();
+
+            if(output.indexOf("\ndotnet-ef ") < 0) {
+                console.log("Installing dotnet-ef as global tool.");
+
+                let cmdPath = tl.which('dotnet');
+                tool = tl.tool(cmdPath)
+                            .arg('tool')
+                            .arg('install')
+                            .arg('--global')
+                            .arg('dotnet-ef');
+        
+                await tool.exec();    
+            }
+            else {
+                console.log("dotnet-ef is already installed.");
+            }
+        }
 
         for(var databasecontext of databasecontexts)
         {
