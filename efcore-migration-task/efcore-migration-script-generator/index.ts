@@ -1,6 +1,5 @@
 import tl = require('azure-pipelines-task-lib/task');
 import trm = require('azure-pipelines-task-lib/toolrunner');
-import { start } from 'repl';
 
 async function run() {
     try {
@@ -44,7 +43,7 @@ async function run() {
                         .arg('tool')
                         .arg('list')
                         .arg('--global');
-
+            
             tool.on('stdout', (data) => {
                 output = data.toString();
             });
@@ -61,7 +60,7 @@ async function run() {
                             .arg('--global')
                             .arg('dotnet-ef');
         
-                await tool.exec();    
+                await tool.exec();
             }
             else {
                 console.log("dotnet-ef is already installed.");
@@ -79,9 +78,9 @@ async function run() {
                         .arg('script')
                         .arg('--idempotent')
                         .arg('--project')
-                        .arg(projectpath)
+                        .arg(projectpath as string)
                         .arg('--startup-project')
-                        .arg(startupprojectpath)
+                        .arg(startupprojectpath as string)
                         .arg('--output')
                         .arg(targetfolder + '/' + databasecontext + '.sql')
                         .arg('--context')
