@@ -58,7 +58,9 @@ async function run() {
                             .arg('tool')
                             .arg('install')
                             .arg('--global')
-                            .arg('dotnet-ef --version 3.0.0-*');
+                            .arg('dotnet-ef')
+                            .arg('--version')
+                            .arg('3.0.0-*');
         
                 await tool.exec();
             }
