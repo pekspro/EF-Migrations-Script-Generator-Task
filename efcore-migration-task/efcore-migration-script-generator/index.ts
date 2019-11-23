@@ -18,6 +18,12 @@ async function run() {
             installdependencies = tl.getBoolInput('installdependencies', false);
         }
 
+        var eftoolversion : undefined|string = undefined;
+        if(tl.filePathSupplied('eftoolversion')) {
+            eftoolversion = tl.getPathInput('eftoolversion', false);
+        }
+
+
         console.log("Project path: " + projectpath);
         
         
@@ -51,7 +57,14 @@ async function run() {
             await tool.exec();
 
             if(output.indexOf("\ndotnet-ef ") < 0) {
-                console.log("Installing dotnet-ef as global tool.");
+                
+
+                if(eftoolversion) {
+                    console.log("Installing latest version of dotnet-ef as global tool.");
+                }
+                else {
+                    console.log("Installing version " + eftoolversion + " of dotnet-ef as global tool.");
+                }
 
                 let cmdPath = tl.which('dotnet');
                 tool = tl.tool(cmdPath)
@@ -59,7 +72,12 @@ async function run() {
                             .arg('install')
                             .arg('--global')
                             .arg('dotnet-ef');
-        
+
+                if(eftoolversion) {
+                    tool = tool.arg('--version')
+                                .arg(eftoolversion)
+                }
+                
                 await tool.exec();
             }
             else {

@@ -58,6 +58,15 @@
             "label": "Install dependencies for .NET Core 3",
             "required": false,
             "helpMarkDown": "If you are using **.NET Core 3**, the global tool **dotnet-ef** needs be installed before migrations script could be generated. Check this setting to do this automatically."
+        },
+        {
+            "name": "eftoolversion",
+            "type": "string",
+            "label": "Version",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.0.0**. Leave empty for latest version.",
+            "visibleRule": "installdependencies = true"
         }
     ],
     "execution": {
