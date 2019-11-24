@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 55 55"
+   style="enable-background:new 0 0 55 55;"
+   xml:space="preserve"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="icon.png"
+   inkscape:export-xdpi="55.854546"
+   inkscape:export-ydpi="55.854546"><metadata
+     id="metadata39"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+     id="defs37">
+			
+		
+		
+	</defs><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview35"
+     showgrid="false"
+     inkscape:zoom="4.9567398"
+     inkscape:cx="-35.784869"
+     inkscape:cy="22.317823"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Ibiza_Symbols" /><g
+     id="g5" /><g
+     id="g7" /><g
+     id="g9" /><g
+     id="g11" /><g
+     id="g13" /><g
+     id="g15" /><g
+     id="g17" /><g
+     id="g19" /><g
+     id="g21" /><g
+     id="g23" /><g
+     id="g25" /><g
+     id="g27" /><g
+     id="g29" /><g
+     id="g31" /><g
+     id="g33" /><g
+     id="g964"
+     transform="translate(-134.96186,10.80678)"><g
+       id="Layer_1">
+	<g
+   id="Azure">
+	</g>
+	<g
+   transform="translate(37.3575,-2500.2)"
+   id="BizTalk_Services">
+	</g>
+	<g
+   id="Key_Vault">
+	</g>
+	<g
+   id="Mobile_Engagement">
+	</g>
+	<g
+   id="Office_subscription">
+		<g
+   id="Office_subscription_1_">
+		</g>
+	</g>
+</g><g
+       id="paths">
+	<g
+   id="Access_control">
+	</g>
+	<g
+   id="Azure_active_directory">
+	</g>
+	<g
+   id="API_Management">
+	</g>
+	<g
+   id="Azure_automation">
+	</g>
+	<g
+   id="Azure_SQL_database">
+	</g>
+	<g
+   id="Azure_subscription">
+	</g>
+	<g
+   id="Backup_service">
+	</g>
+	<g
+   id="Bitbucket_code_source">
+	</g>
+	<g
+   id="Azure_cache">
+	</g>
+	<g
+   id="Content_delivery_network__x28_CDN_x29_">
+	</g>
+	<g
+   id="Cloud_service">
+	</g>
+	<g
+   id="CodePlex">
+	</g>
+	<g
+   id="Dropbox_code_source">
+	</g>
+	<g
+   id="Express_route">
+	</g>
+	<g
+   id="Git_repository">
+	</g>
+	<g
+   id="GitHub_code">
+	</g>
+	<g
+   id="HD_Insight">
+	</g>
+	<g
+   id="Health_monitoring">
+	</g>
+	<g
+   id="Healthy">
+	</g>
+	<g
+   id="BizTalk_hybrid_connection">
+	</g>
+	<g
+   id="Hybrid_connection_manager_for_BizTalk_hybrid_connection">
+	</g>
+	<g
+   id="Hyper-V_recovery_manager">
+	</g>
+	<g
+   id="Machine_learning">
+	</g>
+	<g
+   id="Media_services">
+	</g>
+	<g
+   id="Microsoft_account">
+	</g>
+	<g
+   id="Mobile_services">
+	</g>
+	<g
+   id="Multi-factor_authentication">
+	</g>
+	<g
+   id="MySQL_database">
+	</g>
+	<g
+   id="Notification_hub">
+	</g>
+	<g
+   id="Notification_topic">
+	</g>
+	<g
+   id="Cloud_Office_365">
+	</g>
+	<g
+   id="Office_365">
+	</g>
+	<g
+   id="OS_image">
+	</g>
+	<g
+   id="Remote_app">
+	</g>
+	<g
+   id="Task_scheduler">
+	</g>
+	<g
+   id="Azure_SDK">
+	</g>
+	<g
+   id="Service_bus">
+	</g>
+	<g
+   id="Service_bus_queue">
+	</g>
+	<g
+   id="Service_bus_relay">
+	</g>
+	<g
+   id="Service_bus_topic">
+	</g>
+	<g
+   id="Service_endpoint">
+	</g>
+	<g
+   id="Custom_create">
+	</g>
+	<g
+   id="SQL_data_sync">
+	</g>
+</g><g
+       id="Layer_57">
+</g><g
+       id="Ibiza_Symbols">
+	<g
+   id="g3817"
+   transform="matrix(1.2890866,0,0,1.2890866,-38.660576,2.4671761)"><rect
+     y="-6.2233028"
+     x="139.9548"
+     height="5.4800034"
+     width="15.549463"
+     id="rect914"
+     style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><path
+     sodipodi:nodetypes="ssssssssssss"
+     style="clip-rule:evenodd;fill:#800080;fill-rule:evenodd;stroke-width:0.99999994"
+     inkscape:connector-curvature="0"
+     d="m 147.76837,-6.2124398 c 4.25621,0 7.66119,1.0827147 7.66119,2.3974396 0,1.3147249 -3.48236,2.3974395 -7.66119,2.3974395 -4.17881,0 -7.66116,-1.0827146 -7.66116,-2.3974395 0,-1.3920616 3.48235,-2.3974396 7.66116,-2.3974396 z m -0.23216,-1.6240718 c -5.95868,0 -10.52443,2.0880924 -10.52443,4.3308585 V 17.065923 c 0,2.320104 4.56575,4.408198 10.52443,4.408198 5.95869,0 10.83398,-2.088094 10.83398,-4.330859 V -3.3509798 c 0,-2.3201027 -4.7979,-4.4855318 -10.83398,-4.4855318 z"
+     id="path894" /></g>
+<g
+   id="g3853"
+   transform="matrix(1.0257822,0,0,1.0257822,-4.8362263,-0.64589174)"><rect
+     rx="3.7322919"
+     ry="3.7322919"
+     y="11.292264"
+     x="158.05418"
+     height="27.974628"
+     width="26.847212"
+     id="rect914-4"
+     style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><g
+     style="fill:#808080"
+     transform="translate(130.23024,-16.698127)"
+     id="g1085"><g
+       style="fill:#808080"
+       id="Layer_1-7">
+	<g
+   style="fill:#808080"
+   id="File_x2C__general">
+		<title
+   id="title1007">Sheet.1071</title>
+	</g>
+	<g
+   style="fill:#808080"
+   id="Message">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Monitor">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Monitor_running_apps">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Mouse">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Network_card">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Not_allowed">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Performance">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Phone">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Plug_and_play">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Powershell_script_file">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Protocol_stack">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Queue_x2C__general">
+	</g>
+	<g
+   style="fill:#808080"
+   id="RMS_connector">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Router">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Script_file">
+		<g
+   style="fill:#808080"
+   id="g1032">
+			<path
+   style="fill:#808080"
+   inkscape:connector-curvature="0"
+   d="M 50.5,26.1 H 30.8 c -2.3,0 -4.2,1.9 -4.2,4.2 v 22.9 c 0,2.3 1.9,4.2 4.2,4.2 h 21.8 c 2.3,0 4.2,-1.9 4.2,-4.2 V 32.3 Z m 3.7,27.1 c 0,0.9 -0.7,1.6 -1.6,1.6 H 30.8 c -0.9,0 -1.6,-0.7 -1.6,-1.6 v -23 c 0,-0.9 0.7,-1.6 1.6,-1.6 h 18.4 v 5.1 h 5 z"
+   id="path1024" />
+			<polygon
+   style="fill:#808080"
+   points="36.9,44.9 32.9,42.6 36.9,40.1 36.9,38 31.2,41.9 31.2,43.3 36.9,47 "
+   id="polygon1026" />
+			<polygon
+   style="fill:#808080"
+   points="44.2,35.1 42.4,35.1 38.2,49.6 39.9,49.6 "
+   id="polygon1028" />
+			<polygon
+   style="fill:#808080"
+   points="45.6,44.8 45.6,46.9 51.3,43.2 51.3,41.8 45.6,37.9 45.6,40 49.7,42.5 "
+   id="polygon1030" />
+		</g>
+	</g>
+</g><g
+       style="fill:#808080"
+       id="paths-7">
+	<g
+   style="fill:#808080"
+   id="Access_control-4">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Azure_active_directory-5">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Generic_code">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Laptop">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Load_balancer">
+	</g>
+	<g
+   style="fill:#808080"
+   id="Lock_x2C__protected">
+	</g>
+</g><g
+       style="fill:#808080"
+       id="symbols">
+</g><g
+       style="fill:#808080"
+       id="slices">
+</g></g></g></g></g></svg>
