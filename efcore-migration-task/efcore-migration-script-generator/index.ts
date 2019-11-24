@@ -36,7 +36,7 @@ async function run() {
         }
         console.log("Target folder: " + targetfolder);
         console.log("Number of database contexts: " + databasecontexts.length);
-
+        
         
         if(installdependencies) {
 
@@ -56,8 +56,10 @@ async function run() {
 
             await tool.exec();
 
-            if(output.indexOf("\ndotnet-ef ") < 0) {
-                
+            console.log("Parsing output: \"" + output + "\"");
+
+            // if(output.indexOf("\ndotnet-ef ") < 0) {
+            if(/\sdotnet-ef\s/gm.test(output) === false) {                
 
                 if(eftoolversion) {
                     console.log("Installing latest version of dotnet-ef as global tool.");
@@ -77,14 +79,16 @@ async function run() {
                     tool = tool.arg('--version')
                                 .arg(eftoolversion)
                 }
-                
+
                 await tool.exec();
             }
             else {
                 console.log("dotnet-ef is already installed.");
             }
         } else {
-            console.log("Will not try to install dotnet-ef. If you are using .NET Core 3 you could enable 'Install dependencies for .NET Core 3' to do this automatically.");
+            console.log("Will not try to install dotnet-ef. If you are using .NET Core 3 you could enable 'Install dependencies for .NET Core 3'");
+            console.log("to do this automatically. If you are using .NET Core 2 you may need to add the 'Use .NET Core' before running this task.");
+            console.log("See here for more details: https://github.com/pekspro/EF-Migrations-Script-Generator-Task");
         }
 
         for(var databasecontext of databasecontexts)
@@ -106,7 +110,7 @@ async function run() {
                         .arg('--context')
                         .arg(databasecontext)
                         .arg('--verbose');
-    
+            
             await tool.exec();
         }
        

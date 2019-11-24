@@ -13,7 +13,8 @@ With this task it's very easy to generate migration scripts:
 * If your database context is defined in a library, you also need to select an executable project that is using this library as start-up project.
 * You could also change the directory where the migrations scripts should be stored. By default they are stored in a folder named **migrations**.
 * If you are using **.NET Core 3**, you could enable **Install dependencies for .NET Core 3** to auto install the global tool **dotnet-ef**.
-
+* If you are using **.NET Core 2**, you may be able to build your application but you get an error when creating migration scripts. If that's the case you probably are using .NET Core 3 SDK which doesn't have build-in support to do this. To solve this, just add [Use .NET Core](https://docs.microsoft.com/en-gb/azure/devops/pipelines/tasks/tool/dotnet-core-tool-installer?view=azure-devops) before this task and select version 2.2.207 for instance.
+ 
 When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. The migrations scripts are idempotent, meaning that you could run the several times and the end result should be the same even if you have run the script before. So it's safe to run the migration on every release even if you haven't done any changes.
 
 ## How to apply migrations to your databases
@@ -27,6 +28,8 @@ If you have several databases, add a new task for each database.
 
 ## Supported versions
 Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 is supported. That said, if you are using .NET Core 3 this tool requires that the global tool **dotnet-ef** is installed. You could do this easily be enable **Install dependencies for .NET Core 3**.
+
+If you are using **.NET Core 2**, you may be able to build your application but you get an error when creating migration scripts. If that's the case you probably are using .NET Core 3 SDK which doesn't have build-in support to do this. To solve this, just add [Use .NET Core](https://docs.microsoft.com/en-gb/azure/devops/pipelines/tasks/tool/dotnet-core-tool-installer?view=azure-devops) before this task and select version 2.2.207 for instance.
 
 # Notes about the source
 In the folder **efcore-migration-task** the complete source is for this project.
