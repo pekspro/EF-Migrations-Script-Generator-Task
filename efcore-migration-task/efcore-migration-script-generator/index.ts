@@ -51,7 +51,7 @@ async function run() {
                         .arg('--global');
             
             tool.on('stdout', (data) => {
-                output = data.toString();
+                output += data.toString();
             });
 
             await tool.exec();
