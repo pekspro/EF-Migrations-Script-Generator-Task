@@ -27,7 +27,7 @@ When you have your migration scripts ready you just need to apply them in a rele
 If you have several databases, add a new task for each database.
 
 ## Supported versions
-Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 is supported. That said, if you are using .NET Core 3 this tool requires that the global tool **dotnet-ef** is installed. You could do this easily be enable **Install dependencies for .NET Core 3**.
+Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 and 3.1 is supported. That said, if you are using .NET Core 3.x this tool requires that the global tool **dotnet-ef** is installed. You could do this easily be enable **Install dependencies for .NET Core 3**.
 
 If you are using **.NET Core 2**, you may be able to build your application but you get an error when creating migration scripts. If that's the case you probably are using .NET Core 3 SDK which doesn't have build-in support to do this. To solve this, just add [Use .NET Core](https://docs.microsoft.com/en-gb/azure/devops/pipelines/tasks/tool/dotnet-core-tool-installer?view=azure-devops) before this task and select version 2.2.207 for instance.
 
@@ -85,17 +85,25 @@ Test migration Windows .NET Core 2:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Windows)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=10)
 
-Test migration Windows .NET Core 3:
+Test migration Windows .NET Core 3.0:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%203)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=20)
+
+Test migration Windows .NET Core 3.1:
+
+[![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=22&branchName=master)
 
 Test migration Linux .NET Core 2:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Linux)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=7)
 
-Test migration Linux .NET Core 3:
+Test migration Linux .NET Core 3.0:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=21)
+
+Test migration Linux .NET Core 3.1:
+
+[![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=23&branchName=master)
 
 # References
 Mainfest description:
