@@ -65,7 +65,7 @@
             "label": "Version",
             "defaultValue": "",
             "required": false,
-            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.0.0**. Leave empty for latest version.",
+            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.1**. Leave empty for latest version.",
             "visibleRule": "installdependencies = true"
         }
     ],
