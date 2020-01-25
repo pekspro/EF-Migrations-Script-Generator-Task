@@ -15,7 +15,7 @@ With this task it's very easy to generate migration scripts:
 * If you are using **.NET Core 3**, you could enable **Install dependencies for .NET Core 3** to auto install the global tool **dotnet-ef**.
 * If you are using **.NET Core 2**, you may be able to build your application but you get an error when creating migration scripts. If that's the case you're probably using .NET Core 3 SDK which doesn't have built-in support to do this. To solve this, just add [Use .NET Core](https://docs.microsoft.com/en-gb/azure/devops/pipelines/tasks/tool/dotnet-core-tool-installer?view=azure-devops) before this task and select version 2.2.207 for instance.
  
-When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. The migrations scripts are idempotent, meaning that you could run the several times and the end result should be the same even if you have run the script before. So it's safe to run the migration on every release even if you haven't done any changes.
+When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. Under most circumstances it's safe to run these migrations on every release even if you haven't done any changes.
 
 ## How to apply migrations to your databases
 When you have your migration scripts ready you just need to apply them in a release pipeline. If you have your databases in Azure you could to like this:
