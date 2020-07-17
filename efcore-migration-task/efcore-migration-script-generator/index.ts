@@ -61,7 +61,7 @@ async function run() {
             // if(output.indexOf("\ndotnet-ef ") < 0) {
             if(/\sdotnet-ef\s/gm.test(output) === false) {                
 
-                if(eftoolversion && eftoolversion !== undefined) {
+                if(eftoolversion) {
                     console.log("Installing latest version of dotnet-ef as global tool.");
                 }
                 else {
