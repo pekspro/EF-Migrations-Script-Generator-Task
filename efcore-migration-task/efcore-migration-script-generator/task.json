@@ -20,6 +20,13 @@
         "Patch": 42
     },
     "instanceNameFormat": "Generate Migration Scripts",
+    "groups": [
+        {
+            "name": "generalAdvanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
     "inputs": [{
             "name": "projectpath",
             "type": "filePath",
