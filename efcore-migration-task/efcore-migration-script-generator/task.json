@@ -74,6 +74,15 @@
             "required": false,
             "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.1**. Leave empty for latest version.",
             "visibleRule": "installdependencies = true"
+        },
+        {
+            "name": "idempotent",
+            "type": "boolean",
+            "groupName": "generalAdvanced",
+            "label": "Make script idempotent",
+            "defaultValue": "true",
+            "required": false,
+            "helpMarkDown": "Generate a script that can be used on a database at any migration. Recommended."
         }
     ],
     "execution": {

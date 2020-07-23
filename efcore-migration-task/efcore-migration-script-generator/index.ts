@@ -13,6 +13,11 @@ async function run() {
         var targetfolder = tl.getInput('targetfolder', true);
         var databasecontexts = tl.getDelimitedInput("databasecontexts", "\n", true);
         
+        var idempotent : boolean = true;
+        if(tl.filePathSupplied('idempotent')) {
+            idempotent = tl.getBoolInput('idempotent', false);
+        }
+
         var installdependencies : boolean = false;
         if(tl.filePathSupplied('installdependencies')) {
             installdependencies = tl.getBoolInput('installdependencies', false);
@@ -100,7 +105,6 @@ async function run() {
                         .arg('ef')
                         .arg('migrations')
                         .arg('script')
-                        .arg('--idempotent')
                         .arg('--project')
                         .arg(projectpath as string)
                         .arg('--startup-project')
@@ -110,6 +114,13 @@ async function run() {
                         .arg('--context')
                         .arg(databasecontext)
                         .arg('--verbose');
+
+            if(idempotent) {
+                console.log("The script will be idempotent.");
+                tool = tool.arg('--idempotent');
+            } else {
+                console.log("The script will not idempotent.");
+            }
             
             await tool.exec();
         }
