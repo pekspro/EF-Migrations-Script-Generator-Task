@@ -23,6 +23,11 @@ async function run() {
             configuration = tl.getPathInput('configuration', false);
         }
 
+        var nugetconfiguration : undefined|string = undefined;
+        if(tl.filePathSupplied('nugetconfiguration')) {
+            nugetconfiguration = tl.getPathInput('nugetconfiguration', false);
+        }
+
         var installdependencies : boolean = false;
         if(tl.filePathSupplied('installdependencies')) {
             installdependencies = tl.getBoolInput('installdependencies', false);
@@ -87,7 +92,13 @@ async function run() {
 
                 if(eftoolversion) {
                     tool = tool.arg('--version')
-                                .arg(eftoolversion)
+                                .arg(eftoolversion);
+                }
+
+                if(nugetconfiguration) {
+                    console.log("Will use NuGet configuration file: " + nugetconfiguration);
+                    tool = tool.arg('--configfile')
+                                .arg(nugetconfiguration);
                 }
 
                 await tool.exec();

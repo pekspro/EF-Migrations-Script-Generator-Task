@@ -91,6 +91,16 @@
             "defaultValue": "true",
             "required": false,
             "helpMarkDown": "Generate a script that can be used on a database at any migration. Recommended."
+        },
+        {
+            "name": "nugetconfiguration",
+            "type": "filePath",
+            "groupName": "generalAdvanced",
+            "label": "NuGet configuration file",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "NuGet configuration file to be used when dotnet-ef is installed. Not used in build. Normally not needed.",
+            "visibleRule": "installdependencies"
         }
     ],
     "execution": {
