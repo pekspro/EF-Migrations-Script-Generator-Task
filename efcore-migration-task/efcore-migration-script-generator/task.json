@@ -76,6 +76,14 @@
             "visibleRule": "installdependencies = true"
         },
         {
+            "name": "configuration",
+            "type": "string",
+            "groupName": "generalAdvanced",
+            "label": "Build configuration",
+            "required": false,
+            "helpMarkDown": "Build configuration to use. For instance 'Release' or 'Debug'. Normally this could be empty."
+        },
+        {
             "name": "idempotent",
             "type": "boolean",
             "groupName": "generalAdvanced",

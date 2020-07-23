@@ -18,6 +18,11 @@ async function run() {
             idempotent = tl.getBoolInput('idempotent', false);
         }
 
+        var configuration : undefined|string = undefined;
+        if(tl.filePathSupplied('configuration')) {
+            configuration = tl.getPathInput('configuration', false);
+        }
+
         var installdependencies : boolean = false;
         if(tl.filePathSupplied('installdependencies')) {
             installdependencies = tl.getBoolInput('installdependencies', false);
@@ -114,6 +119,13 @@ async function run() {
                         .arg('--context')
                         .arg(databasecontext)
                         .arg('--verbose');
+
+            if(configuration) {
+                console.log("'" + configuration + "' build configuration will be used.");
+                tool = tool.arg('--configuration').arg(configuration);
+            } else {
+                console.log("Default build configuration will be used.");
+            }
 
             if(idempotent) {
                 console.log("The script will be idempotent.");
