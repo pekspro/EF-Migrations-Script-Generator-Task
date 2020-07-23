@@ -93,6 +93,14 @@
             "helpMarkDown": "Generate a script that can be used on a database at any migration. Recommended."
         },
         {
+            "name": "workingDirectory",
+            "type": "filePath",
+            "label": "Working directory",
+            "helpMarkDown": "Current working directory where the script is run. Normally this could be empty. But if you are getting error like **Specify which project file to use**, try a different directory.",
+            "required": "false",
+            "groupName": "generalAdvanced"
+        },
+        {
             "name": "nugetconfiguration",
             "type": "filePath",
             "groupName": "generalAdvanced",

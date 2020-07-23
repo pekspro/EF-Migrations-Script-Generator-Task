@@ -18,6 +18,11 @@ async function run() {
             idempotent = tl.getBoolInput('idempotent', false);
         }
 
+        var workingDirectory : undefined|string = undefined;
+        if(tl.filePathSupplied('workingDirectory')) {
+            workingDirectory = tl.getPathInput('workingDirectory', false);
+        }
+
         var configuration : undefined|string = undefined;
         if(tl.filePathSupplied('configuration')) {
             configuration = tl.getPathInput('configuration', false);
@@ -145,7 +150,17 @@ async function run() {
                 console.log("The script will not idempotent.");
             }
             
-            await tool.exec();
+            if(workingDirectory) {
+                console.log("Will use working directory: " + workingDirectory);
+
+                await tool.exec(<trm.IExecOptions>{
+                    cwd: workingDirectory
+                });
+
+            } else {
+                await tool.exec();
+            }
+            
         }
        
         console.log('Generating migration script completed!');
