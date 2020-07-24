@@ -17,7 +17,7 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 42
+        "Patch": 50
     },
     "instanceNameFormat": "Generate Migration Scripts",
     "groups": [
