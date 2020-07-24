@@ -1,10 +1,13 @@
 # Entity Framework Core Migrations Script Generator
+
 **Entity Framework Core Migrations Script Generator** is a very simple extension to make it easy
 to generate migration script for projects using Entity Framework Core with Code-First. This tool internally calls **dotnet ef migrations script**.
 
-This tool can be installed from https://marketplace.visualstudio.com/items?itemName=pekspro.pekspro-efcore-migration-script-generator.
+This tool can be installed from [Visual Studio
+Marketplace](https://marketplace.visualstudio.com/items?itemName=pekspro.pekspro-efcore-migration-script-generator).
 
 ## How to generate migration scripts
+
 With this task it's very easy to generate migration scripts:
 
 * Add Entity Framework Core Migrations Script Generator task to your build pipeline.
@@ -14,10 +17,11 @@ With this task it's very easy to generate migration scripts:
 * You could also change the directory where the migrations scripts should be stored. By default they are stored in a folder named **migrations**.
 * If you are using **.NET Core 3**, you could enable **Install dependencies for .NET Core 3** to auto install the global tool **dotnet-ef**.
 * If you are using **.NET Core 2**, you may be able to build your application but you get an error when creating migration scripts. If that's the case you're probably using .NET Core 3 SDK which doesn't have built-in support to do this. To solve this, just add [Use .NET Core](https://docs.microsoft.com/en-gb/azure/devops/pipelines/tasks/tool/dotnet-core-tool-installer?view=azure-devops) before this task and select version 2.2.207 for instance.
- 
+
 When the build is completed you should have migrations scripts stored in the package. They named {{NameOfTheDatabaseContext}}.sql. Under most circumstances it's safe to run these migrations on every release even if you haven't done any changes.
 
 ## How to apply migrations to your databases
+
 When you have your migration scripts ready you just need to apply them in a release pipeline. If you have your databases in Azure you could to like this:
 
 * Add the task **Azure SQL Database Deployment** to your release pipeline.
@@ -27,21 +31,25 @@ When you have your migration scripts ready you just need to apply them in a rele
 If you have several databases, add a new task for each database.
 
 ## Supported versions
+
 Both .NET Core 2 and .NET Core 3 with Entity Framework 2 and 3 and 3.1 is supported. That said, if you are using .NET Core 3.x this tool requires that the global tool **dotnet-ef** is installed. You could do this easily be enable **Install dependencies for .NET Core 3**.
 
 If you are using **.NET Core 2**, you may be able to build your application but you get an error when creating migration scripts. If that's the case you probably are using .NET Core 3 SDK which doesn't have build-in support to do this. To solve this, just add [Use .NET Core](https://docs.microsoft.com/en-gb/azure/devops/pipelines/tasks/tool/dotnet-core-tool-installer?view=azure-devops) before this task and select version 2.2.207 for instance.
 
-# Notes about the source
+## Notes about the source
+
 In the folder **efcore-migration-task** the complete source is for this project.
 
 The folder **NetCoreTestApplication** contains a test project with two database contexts
 that could be used for generating migration scripts.
 
-# How to make changes
+## How to make changes
+
 Changes are hopefully never needed :-) But if the logic need to be changes index.ts should be modified.
 If the UI need to be changed task.json should be updated.
 
 ## How to test changes
+
 There are some commands that are good to know to test the extension locally. These should be executed
 in the folder **efcore-migration-task/efcore-migration-script-generator**
 
@@ -66,14 +74,12 @@ This executes the script.
 
     node index.js
 
-
-
 ## How to create a new release
+
 To create a new release one single command is needed to create a vsix-file. This should be executed
 in the **efcore-migration-task** directory:
 
     tfx extension create
-
 
 ## Build and test status
 
@@ -105,12 +111,8 @@ Test migration Linux .NET Core 3.1:
 
 [![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=23&branchName=master)
 
-# References
-Mainfest description:
-https://docs.microsoft.com/sv-se/azure/devops/extend/develop/manifest
+## References
 
-Task.json reference:
-https://raw.githubusercontent.com/Microsoft/vsts-task-lib/master/tasks.schema.json
-
-Azure Pipeline Tasks:
-https://github.com/Microsoft/azure-pipelines-tasks
+* [Mainfest description](https://docs.microsoft.com/sv-se/azure/devops/extend/develop/manifest)
+* [Task.json reference](https://raw.githubusercontent.com/Microsoft/vsts-task-lib/master/tasks.schema.json)
+* [Azure Pipeline Tasks](https://github.com/Microsoft/azure-pipelines-tasks)
