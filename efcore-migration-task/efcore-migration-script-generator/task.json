@@ -72,7 +72,7 @@
             "label": "Version",
             "defaultValue": "",
             "required": false,
-            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.1**. Leave empty for latest version.",
+            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.6**. Leave empty for latest version.",
             "visibleRule": "installdependencies = true"
         },
         {
@@ -81,7 +81,7 @@
             "groupName": "generalAdvanced",
             "label": "Build configuration",
             "required": false,
-            "helpMarkDown": "Build configuration to use. For instance 'Release' or 'Debug'. Normally this could be empty."
+            "helpMarkDown": "Build configuration to use. For instance **Release** or **Debug**. Normally this could be empty."
         },
         {
             "name": "idempotent",
