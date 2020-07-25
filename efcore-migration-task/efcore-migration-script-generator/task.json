@@ -108,7 +108,7 @@
             "defaultValue": "",
             "required": false,
             "helpMarkDown": "NuGet configuration file to be used when dotnet-ef is installed. Not used in build. Normally not needed.",
-            "visibleRule": "installdependencies"
+            "visibleRule": "installdependencies != false"
         }
     ],
     "execution": {
