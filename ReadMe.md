@@ -99,6 +99,10 @@ Test migration Windows .NET Core 3.1:
 
 [![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=22&branchName=master)
 
+Test migration Windows .NET Core 5:
+
+[![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%205?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=32&branchName=master)
+
 Test migration Linux .NET Core 2:
 
 [![Build status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Linux)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=7)
@@ -110,6 +114,10 @@ Test migration Linux .NET Core 3.0:
 Test migration Linux .NET Core 3.1:
 
 [![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=23&branchName=master)
+
+Test migration Linux .NET Core 5:
+
+[![Build Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%205?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=31&branchName=master)
 
 ## References
 
