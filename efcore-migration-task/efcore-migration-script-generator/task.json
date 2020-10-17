@@ -65,6 +65,13 @@
             "helpMarkDown": "Where migration scripts should be saved. One .sql file will be generated for each DbContext you specify, named the same as your DbContext class. For example, if your DbContext is named MyTestDbContext, then the output file will be named MyTestDbContext.sql."
         },
         {
+            "name": "build",
+            "type": "boolean",
+            "label": "Build project",
+            "defaultValue": "true",
+            "helpMarkDown": "If the projects should be built before the scripts are generated. If this is running in a build pipeline, often this could be unchecked."
+        },
+        {
             "name": "installdependencies",
             "type": "boolean",
             "groupName": "generalDependencies",

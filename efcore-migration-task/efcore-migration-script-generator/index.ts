@@ -18,6 +18,11 @@ async function run() {
             idempotent = tl.getBoolInput('idempotent', false);
         }
 
+        var build : boolean = true;
+        if(tl.filePathSupplied('build')) {
+            build = tl.getBoolInput('build', false);
+        }
+
         var workingDirectory : undefined|string = undefined;
         if(tl.filePathSupplied('workingDirectory')) {
             workingDirectory = tl.getPathInput('workingDirectory', false);
@@ -135,6 +140,13 @@ async function run() {
                         .arg('--context')
                         .arg(databasecontext)
                         .arg('--verbose');
+
+            if(build) {
+                console.log("Projects will be built before scripts are generated.");
+            } else {
+                console.log("Projects will not be built before scripts are generated.");
+                tool = tool.arg('--no-build');
+            }
 
             if(configuration) {
                 console.log("'" + configuration + "' build configuration will be used.");
