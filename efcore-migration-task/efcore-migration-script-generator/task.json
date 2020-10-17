@@ -25,6 +25,11 @@
             "name": "generalAdvanced",
             "displayName": "Advanced",
             "isExpanded": false
+        },
+        {
+            "name": "generalDependencies",
+            "displayName": "Dependencies",
+            "isExpanded": true
         }
     ],
     "inputs": [{
@@ -62,6 +67,7 @@
         {
             "name": "installdependencies",
             "type": "boolean",
+            "groupName": "generalDependencies",
             "label": "Install dependencies for .NET Core 3",
             "required": false,
             "helpMarkDown": "If you are using **.NET Core 3**, the global tool **dotnet-ef** needs be installed before migrations script could be generated. Check this setting to do this automatically."
@@ -69,10 +75,21 @@
         {
             "name": "eftoolversion",
             "type": "string",
+            "groupName": "generalDependencies",
             "label": "Version",
             "defaultValue": "",
             "required": false,
             "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.6**. Leave empty for latest version.",
+            "visibleRule": "installdependencies = true"
+        },
+        {
+            "name": "nugetconfiguration",
+            "type": "filePath",
+            "groupName": "generalDependencies",
+            "label": "NuGet configuration file",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "NuGet configuration file to be used when dotnet-ef is installed. Not used in build. Normally not needed.",
             "visibleRule": "installdependencies = true"
         },
         {
@@ -99,16 +116,6 @@
             "helpMarkDown": "Current working directory where the script is run. Normally this could be empty. But if you are getting error like **Specify which project file to use**, try a different directory.",
             "required": "false",
             "groupName": "generalAdvanced"
-        },
-        {
-            "name": "nugetconfiguration",
-            "type": "filePath",
-            "groupName": "generalAdvanced",
-            "label": "NuGet configuration file",
-            "defaultValue": "",
-            "required": false,
-            "helpMarkDown": "NuGet configuration file to be used when dotnet-ef is installed. Not used in build. Normally not needed.",
-            "visibleRule": "installdependencies != false"
         }
     ],
     "execution": {
