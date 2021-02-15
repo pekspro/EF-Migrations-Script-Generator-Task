@@ -168,7 +168,7 @@ async function run() {
             }
 
             if(runtime) {
-                console.log("The retore target is '" + runtime + "'");
+                console.log("The restore target is '" + runtime + "'");
                 tool = tool.arg('--runtime ' + runtime);
             }
             
