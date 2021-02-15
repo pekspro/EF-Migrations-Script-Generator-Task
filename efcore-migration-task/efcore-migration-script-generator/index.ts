@@ -48,6 +48,11 @@ async function run() {
             eftoolversion = tl.getPathInput('eftoolversion', false);
         }
 
+        var runtime : undefined|string = undefined;
+        if(tl.filePathSupplied('runtime')) {
+            runtime = tl.getPathInput('runtime', false);
+        }
+
 
         console.log("Project path: " + projectpath);
         
@@ -160,6 +165,11 @@ async function run() {
                 tool = tool.arg('--idempotent');
             } else {
                 console.log("The script will not idempotent.");
+            }
+
+            if(runtime) {
+                console.log("The retore target is '" + runtime + "'");
+                tool = tool.arg('--runtime ' + runtime);
             }
             
             if(workingDirectory) {

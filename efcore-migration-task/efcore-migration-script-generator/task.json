@@ -123,6 +123,14 @@
             "helpMarkDown": "Current working directory where the script is run. Normally this could be empty. But if you are getting error like **Specify which project file to use**, try a different directory.",
             "required": "false",
             "groupName": "generalAdvanced"
+        },
+        {
+            "name": "runtime",
+            "type": "string",
+            "label": "Runtime Identifier (RID)",
+            "helpMarkDown": "The identifier of the target runtime to restore packages for",
+            "required": "false",
+            "groupName": "generalAdvanced"
         }
     ],
     "execution": {
