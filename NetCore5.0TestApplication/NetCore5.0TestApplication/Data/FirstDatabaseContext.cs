@@ -26,5 +26,9 @@ namespace NetCore5TestApplication.Data
         public string Name { get; set; }
 
         public string LastName { get; set; }
+
+        public string SecondName { get; set; }
+
+        public string ThirdName { get; set; }
     }
 }
