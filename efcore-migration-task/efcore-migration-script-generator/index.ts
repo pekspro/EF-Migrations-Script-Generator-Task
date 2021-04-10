@@ -28,6 +28,16 @@ async function run() {
             workingDirectory = tl.getPathInput('workingDirectory', false);
         }
 
+        var startMigration : undefined|string = undefined;
+        if(tl.filePathSupplied('startMigration')) {
+            startMigration = tl.getPathInput('startMigration', false);
+        }
+
+        var endMigration : undefined|string = undefined;
+        if(tl.filePathSupplied('endMigration')) {
+            endMigration = tl.getPathInput('endMigration', false);
+        }
+
         var configuration : undefined|string = undefined;
         if(tl.filePathSupplied('configuration')) {
             configuration = tl.getPathInput('configuration', false);
@@ -61,7 +71,20 @@ async function run() {
         }
         console.log("Target folder: " + targetfolder);
         console.log("Number of database contexts: " + databasecontexts.length);
+
+        if(endMigration && !startMigration) {
+            startMigration = '0'
+        }
         
+        if(!startMigration) {
+            console.log("All migrations will be used.");
+        } else {
+            if(!endMigration) {
+                console.log("Script will be generated from \"" + startMigration + "\" to last migration.");
+            } else {
+                console.log("Script will be generated from \"" + startMigration + "\" to \"" + endMigration + "\".");
+            }
+        } 
         
         if(installdependencies) {
 
@@ -130,8 +153,17 @@ async function run() {
             tool = tl.tool(cmdPath)
                         .arg('ef')
                         .arg('migrations')
-                        .arg('script')
-                        .arg('--project')
+                        .arg('script');
+
+            if(startMigration) {
+                tool = tool.arg(startMigration);
+
+                if(endMigration) {
+                    tool = tool.arg(endMigration);
+                }    
+            }
+
+            tool =  tool.arg('--project')
                         .arg(projectpath as string)
                         .arg('--startup-project')
                         .arg(startupprojectpath as string)
