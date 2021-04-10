@@ -17,7 +17,7 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 52
+        "Patch": 60
     },
     "instanceNameFormat": "Generate Migration Scripts",
     "groups": [
@@ -75,9 +75,9 @@
             "name": "installdependencies",
             "type": "boolean",
             "groupName": "generalDependencies",
-            "label": "Install dependencies for .NET Core 3",
+            "label": "Install dependencies for .NET Core 3 or later",
             "required": false,
-            "helpMarkDown": "If you are using **.NET Core 3**, the global tool **dotnet-ef** needs be installed before migrations script could be generated. Check this setting to do this automatically."
+            "helpMarkDown": "If you are using **.NET Core 3 or later**, the global tool **dotnet-ef** needs be installed before migrations script could be generated. Check this setting to do this automatically."
         },
         {
             "name": "eftoolversion",
@@ -86,7 +86,7 @@
             "label": "Version",
             "defaultValue": "",
             "required": false,
-            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.6**. Leave empty for latest version.",
+            "helpMarkDown": "Version of **dotnet-ef** to be installed. Example **3.1.14** or **5.0.5**. Leave empty for latest version.",
             "visibleRule": "installdependencies = true"
         },
         {
@@ -105,7 +105,7 @@
             "groupName": "generalAdvanced",
             "label": "Start migration",
             "required": false,
-            "helpMarkDown": "From which migration script should be generated. Example **AddSecondName** or **20210408185844_AddSecondName**. Leave empty for using the default '0'."
+            "helpMarkDown": "From which migration script should be generated. Example **AddSecondName** or **20210408185844_AddSecondName**. Leave empty for using the default '0'. Note that this will be used on all DbContexts."
         },
         {
             "name": "endMigration",
@@ -113,7 +113,7 @@
             "groupName": "generalAdvanced",
             "label": "End migration",
             "required": false,
-            "helpMarkDown": "To which migration script should be generated. Example **AddThirdName** or **20210408185937_AddThirdName**. Leave empty for using the last migration."
+            "helpMarkDown": "To which migration script should be generated. Example **AddThirdName** or **20210408185937_AddThirdName**. Leave empty for using the last migration. Note that this will be used on all DbContexts."
         },
         {
             "name": "configuration",
