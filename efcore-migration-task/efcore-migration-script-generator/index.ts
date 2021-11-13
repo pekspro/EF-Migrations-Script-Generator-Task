@@ -210,7 +210,7 @@ async function run() {
         console.log('Generating migration script completed!');
     }
     catch (err) {
-        tl.setResult(tl.TaskResult.Failed, err.message);
+        tl.setResult(tl.TaskResult.Failed, (<any>err).message);
     }
 }
 
