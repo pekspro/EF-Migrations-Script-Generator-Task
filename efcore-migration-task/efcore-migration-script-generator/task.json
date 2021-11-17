@@ -15,9 +15,9 @@
     ],
     "author": "PEK's Productions",
     "version": {
-        "Major": 0,
+        "Major": 1,
         "Minor": 0,
-        "Patch": 52
+        "Patch": 0
     },
     "instanceNameFormat": "Generate Migration Scripts",
     "groups": [
@@ -126,8 +126,9 @@
         }
     ],
     "execution": {
-        "Node": {
-            "target": "index.js"
+        "Node10": {
+            "target": "index.js",
+            "argumentFormat": ""
         }
     }
 }
