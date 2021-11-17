@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetCore5TestApplication.Data;
 
 namespace NetCore5TestApplication.Migrations
 {
     [DbContext(typeof(FirstDatabaseContext))]
-    partial class FirstDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210408185844_AddSecondName")]
+    partial class AddSecondName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,9 +34,6 @@ namespace NetCore5TestApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecondName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ThirdName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FirstDataModelID");

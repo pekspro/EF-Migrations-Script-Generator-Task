@@ -2,39 +2,37 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetCore5TestApplication.Data;
+using NetCore6TestApplication.Data;
 
-namespace NetCore5TestApplication.Migrations
+#nullable disable
+
+namespace NetCore6TestApplication.Migrations
 {
     [DbContext(typeof(FirstDatabaseContext))]
-    partial class FirstDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20211113073353_Inititial")]
+    partial class Inititial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            modelBuilder.Entity("NetCore5TestApplication.Data.FirstDataModel", b =>
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("NetCore6TestApplication.Data.FirstDataModel", b =>
                 {
                     b.Property<int>("FirstDataModelID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FirstDataModelID"), 1L, 1);
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ThirdName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FirstDataModelID");
@@ -45,7 +43,6 @@ namespace NetCore5TestApplication.Migrations
                         new
                         {
                             FirstDataModelID = 1,
-                            LastName = "Last name",
                             Name = "First name"
                         });
                 });
