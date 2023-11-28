@@ -110,10 +110,10 @@ async function run() {
             if(/\sdotnet-ef\s/gm.test(output) === false) {                
 
                 if(eftoolversion) {
-                    console.log("Installing latest version of dotnet-ef as global tool.");
+                    console.log("Installing version " + eftoolversion + " of dotnet-ef as global tool.");
                 }
                 else {
-                    console.log("Installing version " + eftoolversion + " of dotnet-ef as global tool.");
+                    console.log("Installing latest version of dotnet-ef as global tool.");
                 }
 
                 let cmdPath = tl.which('dotnet');
