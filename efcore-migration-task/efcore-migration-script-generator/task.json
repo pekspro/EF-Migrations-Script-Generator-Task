@@ -133,6 +133,15 @@
             "helpMarkDown": "Generate a script that can be used on a database at any migration. Recommended."
         },
         {
+            "name": "noTransaction",
+            "type": "boolean",
+            "groupName": "generalAdvanced",
+            "label": "No transactions",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "Don't generate SQL transaction statements."
+        },
+        {
             "name": "workingDirectory",
             "type": "filePath",
             "label": "Working directory",

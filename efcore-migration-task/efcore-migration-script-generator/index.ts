@@ -18,6 +18,11 @@ async function run() {
             idempotent = tl.getBoolInput('idempotent', false);
         }
 
+        var noTransaction : boolean = false;
+        if(tl.filePathSupplied('noTransaction')) {
+            noTransaction = tl.getBoolInput('noTransaction', false);
+        }
+
         var build : boolean = true;
         if(tl.filePathSupplied('build')) {
             build = tl.getBoolInput('build', false);
@@ -192,6 +197,13 @@ async function run() {
                 tool = tool.arg('--idempotent');
             } else {
                 console.log("The script will not idempotent.");
+            }
+
+            if(noTransaction) {
+                console.log("Script till be created without transactions.");
+                tool = tool.arg('--no-transactions');
+            } else {
+                console.log("Script till be created with transactions.");
             }
             
             if(workingDirectory) {
