@@ -87,17 +87,18 @@ These commands setup environment variables for a scenario where the database
 context is defined in the executable project. These are used for setting input
 values for the script.
 
-    $env:INPUT_PROJECTPATH="C:/Users/msn/Source/Repos/pekspro/EF-Migrations-Script-Generator-Task/NetCoreTestApplication/NetCoreTestApplication/NetCoreTestApplication.csproj"
+    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore8.0TestApplication/NetCore8.0TestApplication/NetCore8.0TestApplication.csproj"
     $env:INPUT_TARGETFOLDER="c:/temp"
     $env:INPUT_DATABASECONTEXTS="FirstDatabaseContext`nSecondDatabaseContext"
 
 These commands setup environment variables for a scenario where the database
 context is defined in a library instead of the executable project:
 
-    $env:INPUT_PROJECTPATH="C:/Users/msn/Source/Repos/pekspro/EF-Migrations-Script-Generator-Task/NetCoreTestApplication/NetCoreTestLibrary/NetCoreTestLibrary.csproj"
-    $env:INPUT_STARTUPPROJECTPATH="C:/Users/msn/Source/pekspro/Repos/EF-Migrations-Script-Generator-Task/NetCoreTestApplication/NetCoreTestApplication/NetCoreTestApplication.csproj"
+    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore8.0TestApplication/NetCore8.0TestLibrary/NetCore8.0TestLibrary.csproj"
+    $env:INPUT_STARTUPPROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore8.0TestApplication/NetCore8.0TestApplication/NetCore8.0TestApplication.csproj"
     $env:INPUT_TARGETFOLDER="c:/temp"
     $env:INPUT_DATABASECONTEXTS="LibraryDatabaseContext`nInternalLibraryDatabaseContext"
+    $env:INPUT_NOTRANSACTION="true"
 
 This executes the script.
 
