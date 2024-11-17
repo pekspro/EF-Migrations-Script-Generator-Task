@@ -22,10 +22,10 @@ steps:
     command: custom
     workingDir: 'efcore-migration-task/efcore-migration-script-generator'
     verbose: false
-    customCommand: 'install typescript@3.9.9 --global-style'
+    customCommand: 'install typescript@5.6.3 --global-style'
 
 - task: Npm@1
-  displayName: 'npm install tfx'
+  displayName: 'npm install tfx-cli'
   inputs:
     command: custom
     workingDir: 'efcore-migration-task/efcore-migration-script-generator'
