@@ -1,0 +1,58 @@
+trigger:
+- masterx
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  buildConfiguration: 'Release'
+  projectPath: './NetCore3.0TestApplication/NetCore3.0TestApplication/NetCore3.0TestApplication.csproj'
+  libraryPath: './NetCore3.0TestApplication/NetCore3.0TestLibrary/NetCore3.0TestLibrary.csproj'
+  efToolVersion: '3.*'
+  netSdkVersion: '3.0.100'
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Use .Net Core sdk $(netSdkVersion)'
+  inputs:
+    version: $(netSdkVersion)
+
+- script: 'dotnet restore $(projectPath)'
+  displayName: Restore
+
+- script: 'dotnet build $(projectPath) --configuration $(buildConfiguration)'
+  displayName: Build
+
+- task: efcore-migration-script-generator-task@1
+  displayName: 'Generate migrations scripts - Library project'
+  inputs:
+    projectpath: $(libraryPath)
+    databasecontexts: |
+     LibraryDatabaseContext
+     InternalLibraryDatabaseContext
+    startupprojectpath: $(projectPath)
+    installdependencies: true
+    eftoolversion: '$(efToolVersion)'
+
+- task: efcore-migration-script-generator-task@1
+  displayName: 'Generate migrations scripts - Main project'
+  inputs:
+    projectpath: $(projectPath)
+    databasecontexts: FirstDatabaseContext
+    installdependencies: false
+
+- task: efcore-migration-script-generator-task@1
+  displayName: 'Generate migrations scripts - All in one'
+  inputs:
+    projectpath: $(projectPath)
+    databasecontexts: |
+     FirstDatabaseContext
+     SecondDatabaseContext
+     LibraryDatabaseContext
+     InternalLibraryDatabaseContext
+    installdependencies: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+
