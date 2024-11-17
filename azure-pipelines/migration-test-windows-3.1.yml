@@ -8,7 +8,7 @@ variables:
   buildConfiguration: 'Release'
   projectPath: './NetCore3.1TestApplication/NetCore3.1TestApplication/NetCore3.1TestApplication.csproj'
   libraryPath: './NetCore3.1TestApplication/NetCore3.1TestLibrary/NetCore3.1TestLibrary.csproj'
-  efToolVersion: '3.1.*'
+  efToolVersion: '3.1.0'
   netSdkVersion: '3.1.100'
 
 steps:
