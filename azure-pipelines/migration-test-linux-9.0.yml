@@ -10,7 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 name: Migration Test Linux 9.0
-appendCommitMessageToRunName: false
 
 variables:
   buildConfiguration: 'Release'
@@ -32,8 +31,8 @@ steps:
 - script: 'dotnet build $(projectPath) --configuration $(buildConfiguration)'
   displayName: Build
 
-- script: 'dotnet release $(projectPath) --configuration $(buildConfiguration)'
-  displayName: Publich
+- script: 'dotnet publish $(projectPath) --configuration $(buildConfiguration)'
+  displayName: Publish
 
 - task: efcore-migration-script-generator-task@1
   displayName: 'Generate migrations scripts - Library project'
