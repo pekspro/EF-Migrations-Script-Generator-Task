@@ -3,8 +3,8 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger:
-- master
+# trigger:
+# - master
 
 pool:
   vmImage: windows-latest
@@ -30,9 +30,6 @@ steps:
 
 - script: 'dotnet build $(projectPath) --configuration $(buildConfiguration)'
   displayName: Build
-
-# - script: 'dotnet publish $(projectPath) --configuration $(buildConfiguration)'
-#   displayName: Publish
 
 - task: efcore-migration-script-generator-task@1
   displayName: 'Generate migrations scripts - Library project'
