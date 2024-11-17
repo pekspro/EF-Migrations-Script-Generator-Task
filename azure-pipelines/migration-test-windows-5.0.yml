@@ -6,10 +6,10 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  projectPath: './NetCore6.0TestApplication/NetCore6.0TestApplication/NetCore6.0TestApplication.csproj'
-  libraryPath: './NetCore6.0TestApplication/NetCore6.0TestLibrary/NetCore6.0TestLibrary.csproj'
-  efToolVersion: '6.*'
-  netSdkVersion: '6.0.100'
+  projectPath: './NetCore5.0TestApplication/NetCore5.0TestApplication/NetCore5.0TestApplication.csproj'
+  libraryPath: './NetCore5.0TestApplication/NetCore5.0TestLibrary/NetCore5.0TestLibrary.csproj'
+  efToolVersion: '5.*'
+  netSdkVersion: '5.0.100'
 
 steps:
 

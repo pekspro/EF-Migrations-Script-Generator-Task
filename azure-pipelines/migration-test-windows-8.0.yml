@@ -4,8 +4,6 @@ trigger:
 pool:
   vmImage: windows-latest
 
-# name: Migration Test Windows 8.0
-
 variables:
   buildConfiguration: 'Release'
   projectPath: './NetCore8.0TestApplication/NetCore8.0TestApplication/NetCore8.0TestApplication.csproj'

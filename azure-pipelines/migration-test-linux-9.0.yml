@@ -4,8 +4,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-# name: Migration Test Linux 9.0
-
 variables:
   buildConfiguration: 'Release'
   projectPath: './NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj'
