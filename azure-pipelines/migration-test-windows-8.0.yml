@@ -9,14 +9,14 @@ trigger:
 pool:
   vmImage: windows-latest
 
-# name: Migration Test Windows 9.0
+# name: Migration Test Windows 8.0
 
 variables:
   buildConfiguration: 'Release'
-  projectPath: './NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj'
-  libraryPath: './NetCore9.0TestApplication/NetCore9.0TestLibrary/NetCore9.0TestLibrary.csproj'
-  efToolVersion: '9.*'
-  netSdkVersion: '9.0.100'
+  projectPath: './NetCore8.0TestApplication/NetCore8.0TestApplication/NetCore8.0TestApplication.csproj'
+  libraryPath: './NetCore8.0TestApplication/NetCore8.0TestLibrary/NetCore8.0TestLibrary.csproj'
+  efToolVersion: '8.*'
+  netSdkVersion: '8.0.100'
 
 steps:
 
