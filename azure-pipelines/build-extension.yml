@@ -1,0 +1,56 @@
+trigger:
+- masterx
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 10.x'
+  inputs:
+    versionSpec: 10.x
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: 'efcore-migration-task/efcore-migration-script-generator'
+    verbose: false
+
+- task: Npm@1
+  displayName: 'npm install typescript'
+  inputs:
+    command: custom
+    workingDir: 'efcore-migration-task/efcore-migration-script-generator'
+    verbose: false
+    customCommand: 'install typescript@3.9.9 --global-style'
+
+- task: Npm@1
+  displayName: 'npm install tfx'
+  inputs:
+    command: custom
+    workingDir: 'efcore-migration-task/efcore-migration-script-generator'
+    verbose: false
+    customCommand: 'install tfx-cli@v0.17.0 --global'
+
+- script: npx tsc
+  workingDirectory: 'efcore-migration-task/efcore-migration-script-generator'
+  failOnStderr: true
+  displayName: 'Compile typescript'
+
+- task: Npm@1
+  displayName: 'npm uninstall typescript'
+  inputs:
+    command: custom
+    workingDir: 'efcore-migration-task/efcore-migration-script-generator'
+    verbose: false
+    customCommand: 'uninstall typescript'
+
+- script: tfx extension create --output-path $(build.artifactstagingdirectory)
+  workingDirectory: 'efcore-migration-task'
+  failOnStderr: true
+  displayName: 'Build extension'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'

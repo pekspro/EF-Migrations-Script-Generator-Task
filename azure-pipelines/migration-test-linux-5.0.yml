@@ -9,7 +9,7 @@ variables:
   projectPath: './NetCore5.0TestApplication/NetCore5.0TestApplication/NetCore5.0TestApplication.csproj'
   libraryPath: './NetCore5.0TestApplication/NetCore5.0TestLibrary/NetCore5.0TestLibrary.csproj'
   efToolVersion: '5.*'
-  netSdkVersion: '5.0.100'
+  netSdkVersion: '5.x'
 
 steps:
 
