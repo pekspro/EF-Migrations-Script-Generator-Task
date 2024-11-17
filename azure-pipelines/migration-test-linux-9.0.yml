@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+name: Migration Test Linux 9.0
+appendCommitMessageToRunName: false
+
 variables:
   buildConfiguration: 'Release'
   projectPath: './NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj'
@@ -23,14 +26,14 @@ steps:
   inputs:
     version: $(netSdkVersion)
 
-- script: Restore
-  displayName: 'dotnet restore $(projectPath)'
+- script: 'dotnet restore $(projectPath)'
+  displayName: Restore
 
-- script: Build
-  displayName: 'dotnet build $(projectPath) --configuration $(buildConfiguration)'
+- script: 'dotnet build $(projectPath) --configuration $(buildConfiguration)'
+  displayName: Build
 
-- script: Publich
-  displayName: 'dotnet release $(projectPath) --configuration $(buildConfiguration)'
+- script: 'dotnet release $(projectPath) --configuration $(buildConfiguration)'
+  displayName: Publich
 
 - task: efcore-migration-script-generator-task@1
   displayName: 'Generate migrations scripts - Library project'
