@@ -1,0 +1,68 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+# name: Migration Test Windows 9.0
+
+variables:
+  buildConfiguration: 'Release'
+  projectPath: './NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj'
+  libraryPath: './NetCore9.0TestApplication/NetCore9.0TestLibrary/NetCore9.0TestLibrary.csproj'
+  efToolVersion: '9.*'
+  netSdkVersion: '9.0.100'
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Use .Net Core sdk $(netSdkVersion)'
+  inputs:
+    version: $(netSdkVersion)
+
+- script: 'dotnet restore $(projectPath)'
+  displayName: Restore
+
+- script: 'dotnet build $(projectPath) --configuration $(buildConfiguration)'
+  displayName: Build
+
+# - script: 'dotnet publish $(projectPath) --configuration $(buildConfiguration)'
+#   displayName: Publish
+
+- task: efcore-migration-script-generator-task@1
+  displayName: 'Generate migrations scripts - Library project'
+  inputs:
+    projectpath: $(libraryPath)
+    databasecontexts: |
+     LibraryDatabaseContext
+     InternalLibraryDatabaseContext
+    startupprojectpath: $(projectPath)
+    installdependencies: true
+    eftoolversion: '$(efToolVersion)'
+
+- task: efcore-migration-script-generator-task@1
+  displayName: 'Generate migrations scripts - Main project'
+  inputs:
+    projectpath: $(projectPath)
+    databasecontexts: FirstDatabaseContext
+    installdependencies: false
+
+- task: efcore-migration-script-generator-task@1
+  displayName: 'Generate migrations scripts - All in one'
+  inputs:
+    projectpath: $(projectPath)
+    databasecontexts: |
+     FirstDatabaseContext
+     SecondDatabaseContext
+     LibraryDatabaseContext
+     InternalLibraryDatabaseContext
+    installdependencies: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+
