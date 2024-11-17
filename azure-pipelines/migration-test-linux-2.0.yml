@@ -6,9 +6,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  projectPath: './NetCore3.0TestApplication/NetCore3.0TestApplication/NetCore3.0TestApplication.csproj'
-  libraryPath: './NetCore3.0TestApplication/NetCore3.0TestLibrary/NetCore3.0TestLibrary.csproj'
-  netSdkVersion: '2.0.100'
+  projectPath: './NetCore2.0TestApplication/NetCore2.0TestApplication/NetCore2.0TestApplication.csproj'
+  libraryPath: './NetCore2.0TestApplication/NetCore2.0TestLibrary/NetCore2.0TestLibrary.csproj'
+  netSdkVersion: '2.2.207'
 
 steps:
 

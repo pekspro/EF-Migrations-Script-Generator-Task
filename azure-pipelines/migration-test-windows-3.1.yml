@@ -6,9 +6,10 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  projectPath: './NetCore2.0TestApplication/NetCore2.0TestApplication/NetCore2.0TestApplication.csproj'
-  libraryPath: './NetCore2.0TestApplication/NetCore2.0TestLibrary/NetCore2.0TestLibrary.csproj'
-  netSdkVersion: '2.2.207'
+  projectPath: './NetCore3.1TestApplication/NetCore3.1TestApplication/NetCore3.1TestApplication.csproj'
+  libraryPath: './NetCore3.1TestApplication/NetCore3.1TestLibrary/NetCore3.1TestLibrary.csproj'
+  efToolVersion: '3.1.*'
+  netSdkVersion: '3.1.100'
 
 steps:
 
@@ -31,7 +32,7 @@ steps:
      LibraryDatabaseContext
      InternalLibraryDatabaseContext
     startupprojectpath: $(projectPath)
-    installdependencies: false
+    installdependencies: true
     eftoolversion: '$(efToolVersion)'
 
 - task: efcore-migration-script-generator-task@1
