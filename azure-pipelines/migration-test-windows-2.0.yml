@@ -2,14 +2,13 @@ trigger:
 - masterx
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 variables:
   buildConfiguration: 'Release'
   projectPath: './NetCore3.0TestApplication/NetCore3.0TestApplication/NetCore3.0TestApplication.csproj'
   libraryPath: './NetCore3.0TestApplication/NetCore3.0TestLibrary/NetCore3.0TestLibrary.csproj'
-  efToolVersion: '3.0.*'
-  netSdkVersion: '3.0.100'
+  netSdkVersion: '2.0.100'
 
 steps:
 
@@ -32,7 +31,7 @@ steps:
      LibraryDatabaseContext
      InternalLibraryDatabaseContext
     startupprojectpath: $(projectPath)
-    installdependencies: true
+    installdependencies: false
     eftoolversion: '$(efToolVersion)'
 
 - task: efcore-migration-script-generator-task@1
