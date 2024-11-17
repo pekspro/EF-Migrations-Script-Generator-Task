@@ -118,71 +118,17 @@ Build:
 [![Build
 status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Build%20extension)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=11)
 
-Test migration Windows .NET Core 2:
+Migration generator tests:
 
-[![Build
-status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Windows)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=10)
-
-Test migration Windows .NET Core 3.0:
-
-[![Build
-status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%203)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=20)
-
-Test migration Windows .NET Core 3.1:
-
-[![Build
-Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=22&branchName=master)
-
-Test migration Windows .NET Core 5:
-
-[![Build
-Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%205?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=32&branchName=master)
-
-Test migration Windows .NET Core 6:
-
-[![Build
-Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%206?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=37&branchName=master)
-
-Test migration Windows .NET Core 8:
-
-[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%208)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=41)
-
-Test migration Windows .NET Core 9:
-
-[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%209)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=42)
-
-Test migration Linux .NET Core 2:
-
-[![Build
-status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Task%20-%20Linux)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=7)
-
-Test migration Linux .NET Core 3.0:
-
-[![Build
-status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=21)
-
-Test migration Linux .NET Core 3.1:
-
-[![Build
-Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%203.1?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=23&branchName=master)
-
-Test migration Linux .NET Core 5:
-
-[![Build
-Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%205?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=31&branchName=master)
-
-Test migration Linux .NET Core 6:
-
-[![Build
-Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%206?branchName=master)](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=38&branchName=master)
-
-Test migration Linux .NET Core 8:
-
-[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%208)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=40)
-
-Test migration Linux .NET Core 9:
-
-[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%208)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=40)
+|.NET version | Windows | Linux |
+|-------------|---------|-------|
+| .NET 9      | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%209?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=45&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%209?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=44&branchName=master) |
+| .NET 8      | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%208?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=47&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%208?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=46&branchName=master) |
+| .NET 6      | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%206?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=49&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%206?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=48&branchName=master) |
+| .NET 5      | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%205?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=51&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%205?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=50&branchName=master) |
+| .NET 3.1    | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%203.1?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=57&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%203.1?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=56&branchName=master) |
+| NET 3.0     | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%203?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=53&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%203?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=52&branchName=master) |
+| .NET 2.0    | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Windows%20.Net%202?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=55&branchName=master) | [![Build Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status%2FTest%20Migration%20Linux%20.Net%202?branchName=master)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=54&branchName=master) |
 
 ## References
 
