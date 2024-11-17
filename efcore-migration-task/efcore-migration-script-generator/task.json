@@ -154,6 +154,14 @@
         "Node10": {
             "target": "index.js",
             "argumentFormat": ""
+        },
+        "Node16": {
+            "target": "index.js",
+            "argumentFormat": ""
+            },
+        "Node20_1": {
+            "target": "index.js",
+            "argumentFormat": ""
         }
     }
 }
