@@ -87,15 +87,15 @@ These commands setup environment variables for a scenario where the database
 context is defined in the executable project. These are used for setting input
 values for the script.
 
-    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore8.0TestApplication/NetCore8.0TestApplication/NetCore8.0TestApplication.csproj"
+    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj"
     $env:INPUT_TARGETFOLDER="c:/temp"
     $env:INPUT_DATABASECONTEXTS="FirstDatabaseContext`nSecondDatabaseContext"
 
 These commands setup environment variables for a scenario where the database
 context is defined in a library instead of the executable project:
 
-    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore8.0TestApplication/NetCore8.0TestLibrary/NetCore8.0TestLibrary.csproj"
-    $env:INPUT_STARTUPPROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore8.0TestApplication/NetCore8.0TestApplication/NetCore8.0TestApplication.csproj"
+    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore9.0TestApplication/NetCore9.0TestLibrary/NetCore9.0TestLibrary.csproj"
+    $env:INPUT_STARTUPPROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj"
     $env:INPUT_TARGETFOLDER="c:/temp"
     $env:INPUT_DATABASECONTEXTS="LibraryDatabaseContext`nInternalLibraryDatabaseContext"
     $env:INPUT_NOTRANSACTION="true"
@@ -145,8 +145,11 @@ Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/
 
 Test migration Windows .NET Core 8:
 
-[![Build
-Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%208)
+[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%208)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=41)
+
+Test migration Windows .NET Core 9:
+
+[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Windows%20.Net%20Core%209)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=42)
 
 Test migration Linux .NET Core 2:
 
@@ -175,8 +178,11 @@ Status](https://dev.azure.com/pekspro/EF-Migrations-Script-Generator-Task/_apis/
 
 Test migration Linux .NET Core 8:
 
-[![Build
-Status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%208)
+[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%208)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=40)
+
+Test migration Linux .NET Core 9:
+
+[![Build status](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_apis/build/status/Test%20Migration%20Linux%20.Net%20Core%208)](https://pekspro.visualstudio.com/EF-Migrations-Script-Generator-Task/_build/latest?definitionId=40)
 
 ## References
 
