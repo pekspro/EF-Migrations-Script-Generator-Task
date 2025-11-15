@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="NetCore10.0TestApplication/NetCore10.0TestApplication.csproj" />
+  <Project Path="NetCore10.0TestLibrary/NetCore10.0TestLibrary.csproj" />
+</Solution>

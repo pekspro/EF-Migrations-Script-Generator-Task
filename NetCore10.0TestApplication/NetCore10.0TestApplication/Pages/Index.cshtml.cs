@@ -1,0 +1,31 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using NetCore10TestApplication.Data;
+
+namespace NetCore10._0TestApplication.Pages;
+
+public class IndexModel : PageModel
+{
+    private readonly ILogger<IndexModel> _logger;
+
+    public IndexModel(ILogger<IndexModel> logger, FirstDatabaseContext firstDatabaseContext, SecondDatabaseContext secondDatabaseContext)
+    {
+        _logger = logger;
+
+        FirstDatabaseContext = firstDatabaseContext;
+        SecondDatabaseContext = secondDatabaseContext;
+    }
+
+    public FirstDatabaseContext FirstDatabaseContext { get; }
+    public SecondDatabaseContext SecondDatabaseContext { get; }
+
+    public async Task OnGetAsync()
+    {
+        await FirstDatabaseContext.Database.EnsureCreatedAsync();
+        await SecondDatabaseContext.Database.EnsureCreatedAsync();
+
+        var firstData = await FirstDatabaseContext.FirstDataModels.ToListAsync();
+        var secondData = await SecondDatabaseContext.SecondDataModels.ToListAsync();
+    }
+}
