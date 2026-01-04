@@ -73,7 +73,7 @@ Changes are hopefully never needed :-) But if the logic need to be changes
 index.ts should be modified. If the UI need to be changed task.json should be
 updated.
 
-## How to test changes
+## How to test changes (Windows)
 
 There are some commands that are good to know to test the extension locally.
 These should be executed in the folder
@@ -87,15 +87,15 @@ These commands setup environment variables for a scenario where the database
 context is defined in the executable project. These are used for setting input
 values for the script.
 
-    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj"
+    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore10.0TestApplication/NetCore10.0TestApplication/NetCore10.0TestApplication.csproj"
     $env:INPUT_TARGETFOLDER="c:/temp"
     $env:INPUT_DATABASECONTEXTS="FirstDatabaseContext`nSecondDatabaseContext"
 
 These commands setup environment variables for a scenario where the database
 context is defined in a library instead of the executable project:
 
-    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore9.0TestApplication/NetCore9.0TestLibrary/NetCore9.0TestLibrary.csproj"
-    $env:INPUT_STARTUPPROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore9.0TestApplication/NetCore9.0TestApplication/NetCore9.0TestApplication.csproj"
+    $env:INPUT_PROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore10.0TestApplication/NetCore10.0TestLibrary/NetCore10.0TestLibrary.csproj"
+    $env:INPUT_STARTUPPROJECTPATH="C:/Users/msn/source/repos/pekspro/EF-Migrations-Script-Generator-Task/NetCore10.0TestApplication/NetCore10.0TestApplication/NetCore10.0TestApplication.csproj"
     $env:INPUT_TARGETFOLDER="c:/temp"
     $env:INPUT_DATABASECONTEXTS="LibraryDatabaseContext`nInternalLibraryDatabaseContext"
     $env:INPUT_NOTRANSACTION="true"
@@ -103,6 +103,54 @@ context is defined in a library instead of the executable project:
 This executes the script.
 
     node index.js
+
+## How to test changes (development container)
+
+This repository includes a VS Code dev container configuration in the `.devcontainer` folder. It provides a container with .NET SDK, Node.js and `tfx-cli` installed so you can develop and test the task.
+
+Start the dev container. Then enter these command to install node packges.
+
+```bash
+cd ./efcore-migration-task/efcore-migration-script-generator/
+npm install
+```
+
+Run this to compile the typescript code:
+
+```bash
+tsc
+```
+Test when the database context is defined in the executable project:
+
+```bash
+export INPUT_PROJECTPATH="/workspace/NetCore10.0TestApplication/NetCore10.0TestApplication/NetCore10.0TestApplication.csproj"
+export INPUT_TARGETFOLDER="/tmp/ef-migrations-output"
+export INPUT_DATABASECONTEXTS=$'FirstDatabaseContext\nSecondDatabaseContext'
+export INPUT_INSTALLDEPENDENCIES=true
+export INPUT_EFTOOLVERSION=$'10.*'
+
+node index.js
+```
+
+Test when the database context is defined in a library and a startup project is required:
+
+```bash
+export INPUT_PROJECTPATH="/workspace/NetCore10.0TestApplication/NetCore10.0TestLibrary/NetCore10.0TestLibrary.csproj"
+export INPUT_STARTUPPROJECTPATH="/workspace/NetCore10.0TestApplication/NetCore10.0TestApplication/NetCore10.0TestApplication.csproj"
+export INPUT_TARGETFOLDER="/tmp/ef-migrations-output"
+export INPUT_DATABASECONTEXTS=$'LibraryDatabaseContext\nInternalLibraryDatabaseContext'
+export INPUT_NOTRANSACTION="true"
+export INPUT_INSTALLDEPENDENCIES=true
+export INPUT_EFTOOLVERSION=$'10.*'
+node index.js
+```
+
+The files are in the `tmp/ef-migrations-output` folder:
+
+```bash
+ls -l /tmp/ef-migrations-output || true
+cat /tmp/ef-migrations-output/FirstDatabaseContext.sql || true
+```
 
 ## How to create a new release
 
@@ -138,3 +186,4 @@ Migration generator tests:
 * [Task.json
   reference](https://raw.githubusercontent.com/Microsoft/vsts-task-lib/master/tasks.schema.json)
 * [Azure Pipeline Tasks](https://github.com/Microsoft/azure-pipelines-tasks)
+
