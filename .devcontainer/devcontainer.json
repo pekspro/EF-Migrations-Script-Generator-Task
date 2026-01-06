@@ -24,6 +24,5 @@
   "mounts": [
     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
   ],
-  "remoteUser": "vscode",
   "workspaceFolder": "/workspace"
 }
