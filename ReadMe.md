@@ -129,6 +129,8 @@ export INPUT_DATABASECONTEXTS=$'FirstDatabaseContext\nSecondDatabaseContext'
 export INPUT_INSTALLDEPENDENCIES=true
 export INPUT_EFTOOLVERSION=$'10.*'
 
+dotnet restore $INPUT_PROJECTPATH
+
 node index.js
 ```
 
@@ -142,6 +144,9 @@ export INPUT_DATABASECONTEXTS=$'LibraryDatabaseContext\nInternalLibraryDatabaseC
 export INPUT_NOTRANSACTION="true"
 export INPUT_INSTALLDEPENDENCIES=true
 export INPUT_EFTOOLVERSION=$'10.*'
+
+dotnet restore $INPUT_PROJECTPATH
+
 node index.js
 ```
 
